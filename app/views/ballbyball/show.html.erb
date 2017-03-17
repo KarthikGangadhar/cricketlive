@@ -40,9 +40,11 @@
 	<body id="page-top" class="index">
 
 		<%= render 'navigation' %>
-			
-		<%= render 'details' ,  @ballbyball %>
-	
+		
+		<% if @data.present? %>	
+		<%= render partial: 'details' , locals: {data: @data }  %>
+		<% end %>
+		
 		<%= render 'home/footer' %>
 
 		<!-- jQuery -->

@@ -13,19 +13,29 @@
 </style>
 <div class="cl-col-100">
 	<div id="live_updates">
+	<% if data.present? &&  data.matchScore['team-1'].present? && data.matchScore['team-2'].present? %>
 	<div class="col-sm-12 green title" align="center" >
-		<h4><%= @cricketScore['data']['team-1'] + " VS "+ @cricketScore['data']['team-2'] %></h4>	
+		<h4><%= data.matchScore['team-1'] + " VS "+ data.matchScore['team-2'] %></h4>	
 	</div>
+	<% end %>
+	
 	<% is_added = false %>
-	<% if @ballbyball['data']['data'].present? %>
-	<%  @ballbyball['data']['data'].each do |ball| %>
+	<% if balls.present? %>
+	<% binding.pry %>
+	<%  balls.each do |ball| %>
 	<% if !ball['ball'].first['pre_text'].present? || strip_tags(ball['ball'].first['pre_text']).upcase != "\nUPDATES ONLY\n" %>
 	<% if !is_added %>
-	<%= render 'live_score' ,  @cricketScore %>
-	<%= render 'player_update' ,  @ballbyball %>
+	
+	<% if data.matchScore.present? %>
+	<%= render partial: 'live_score' ,  locals: { liveScore: data.matchScore } %>
+	<% end %>
+	
+	<%= render partial: 'player_update' ,  locals: {batsmen: data.batsman , bowlers: data.bowler, team: data.teams } %>
+	
 	<% is_added = true%>
 	<% end %>
-	<%= render 'over_details',  locals: { ball: ball , ballbyball: @ballbyball} %>	
+	<% binding.pry%>
+	<%= render partial: 'over_details',  locals: { ball: ball , team: data.teams} %>	
 	<% end %>
 	<div class="cl-min-inf" >
 		<% ball['ball'].each do |delivery| %>

@@ -93,13 +93,10 @@ module CricApi
       
       live_updates['data']['matches'].each do |update|
         data = match_update['data']['data']
-        # binding.pry
-        for item in data 
-          # binding.pry         
+        for item in data        
           if item['unique_id'] == update['unique_id']
             update['title'] = item['title']
             update['description'] = item['description']
-            # binding.pry
           break;
           end
         end

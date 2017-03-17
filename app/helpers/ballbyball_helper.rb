@@ -1,8 +1,8 @@
 module BallbyballHelper
   
-  def getPlayerName(ballbyball, pid)
+  def getPlayerName(teams, pid)
     player_name = ""
-    ballbyball['data']['team'].each do |team|
+    teams.each do |team|
       team['player'].each do |player|
         if (player['player_id'] == pid || player['object_id'] == pid )
           player_name = player['known_as']
@@ -13,10 +13,11 @@ module BallbyballHelper
 
   end
   
-  def getTeamName(ballbyball, tid)
+  def getTeamName(teams, tid)
 
     team_name = ""
-    ballbyball['data']['team'].each do |team|
+    binding.pry
+    teams.each do |team|
         if team['team_id'] == tid
           team_name = team['team_filename']
         end
@@ -25,9 +26,9 @@ module BallbyballHelper
 
   end
   
-  def getPlayerForOverUpdate(ballbyball, pid)
+  def getPlayerForOverUpdate(teams, pid)
     player_name = ""
-    ballbyball['data']['team'].each do |team|
+    teams.each do |team|
       team['player'].each do |player|
         if (player['player_id'] == pid || player['object_id'] == pid )
           player_name = player['card_short']

@@ -1,12 +1,6 @@
-<% isbatsman = false %>
-<% isbowler = false %>
-
-<% if @ballbyball.present? && @ballbyball['data'].present? && @ballbyball['data']['data'].present? %>
-
-<%  for ball in @ballbyball['data']['data'] %>
-	<% if !isbatsman %>
+<% if batsmen.present? && bowlers.present? && team.present?%>
+	
 	<div class="cl-min-inf">
-		<% if ball['batsman'] != nil %>
 		<div class="cl-min-hdr-rw">
 			<div class="cl-txt-50">
 				Batsman
@@ -27,16 +21,14 @@
 				SR
 			</div>
 		</div>
-		
-		<% end %>
 
 		<!-- batsmen loop -->
-		<% if ball['batsman'] != nil %>
-		<% ball['batsman'].each do |batsman| %>
+		
+		<% batsmen.each do |batsman| %>
 
 		<div class="cl-min-itm-rw">
 			<div class="cl-txt-50">
-				<% player_name = getPlayerName(@ballbyball, batsman['old_player_id'] ) %>
+				<% player_name = getPlayerName(team, batsman['old_player_id'] ) %>
 				<%= link_to player_name , {:controller => "playerstat", :action => "show", :pid => batsman['pid']  }  %>
 			</div>
 			<div class="cl-btmn-data-10">
@@ -61,19 +53,16 @@
 		</div>
 
 		<% end %>
-		<% isbatsman = true %>
-		<% end %>
+
 		<!-- batsmen loop ends -->
 
 	</div>
 
-	<% end %>
 	<!--balls loop -->
 
-	<% if !isbowler %>
 	<!-- bowler -->
 	<div class="cl-min-inf" ng-if="">
-		<% if ball['bowler'] != nil %>
+		
 		<div class="cl-min-hdr-rw">
 			<div class="cl-txt-50">
 				Bowler
@@ -94,14 +83,13 @@
 				ECO
 			</div>
 		</div>
-		<% end %>
+		
 		<!-- bolwer loop -->
-		<% if ball['bowler'] != nil %>
-		<% for bowler in ball['bowler'] %>
+		<% for bowler in bowlers %>
 
 		<div class="cl-min-itm-rw">
 			<div class="cl-txt-50">
-				<% player_name = getPlayerName(@ballbyball, bowler['old_player_id'] ) %>
+				<% player_name = getPlayerName(team, bowler['old_player_id'] ) %>
 				<%= link_to player_name , {:controller => "playerstat", :action => "show", :pid => bowler['pid']  }  %>
 			</div>
 			<div class="cl-txt-10">
@@ -126,11 +114,9 @@
 		</div>
 
 		<%end%>
-		<% isbowler = true %>
-		<%end%>
 	</div>
-	<% end %>
+
 	<!-- bolwer loop ends -->
 	<!-- end bowler -->
-	<% end %>
+
 <% end %>
