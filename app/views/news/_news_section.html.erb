@@ -40,18 +40,19 @@
 		<div class="row col-sm-10 col-sm-offset-1 bg-light-gray" id="news_id">
 			<% if news.present? && news_count.present? %>
 			<% news.each do |type| %>
-
+			<% if type.present? && type.title.present? && type.description.present?  %>
 			<div class="cl-news-box bg-light-gray">
 				<div class="cl-nws-lst">
 					<b class="cl-nws-ttl"><b class="cl-nws-hdln-ancr"
-					title="<%= type['title'].html_safe %>"><%= type['title'].html_safe %></b></b>
+					title="<%= type.title.html_safe %>"><%= type.title.html_safe %></b></b>
 					<div class="cl-nws-intr">
-						<%= type['description'].html_safe %>
+						<%= type.description.html_safe %>
 					</div>
 				</div>
 
 			</div>
-			<div id="news_load_more" data-news-list="<%= news.to_json %>"></div>	
+			<div id="news_load_more" data-news-list="<%= news.to_json %>"></div>
+			<% end %>	
 			<% end %>
 			<div align="center" >
 			<button type="button" id="prop_load_more" class="btn btn-plain load-more-button">Load More News</button>

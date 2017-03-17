@@ -6,18 +6,25 @@
 		<div class="row col-sm-10 col-sm-offset-1 bg-light-gray">
 
 			<div class="cl-scdl-box bg-light-gray">
-				<% @matchCalendar['data']['data'].each do |type| %>
-
+				<% if schedule.present? && schedule_count.present?%>
+				<% schedule.each do |type| %>
+				<% if type.present? && type.name.present? && type.date.present? %>
 				<div class="cl-scdl-lst bg-light-gray">
 					<div class="cl-scdl-date">
 						<b class="cl-scdl-hdln"><b class="cl-scdl-hdln-ancr"
-						title="<%= type['date'].html_safe %>"><%= type['date'].html_safe %></b></b>
+						title="<%= type.date.html_safe %>"><%= type.date.html_safe %></b></b>
 					</div>
 					<div class="cl-scdl-cntr">
 						<div class="cl-scdl-intr">
-							<%= type['name'].html_safe %>	
+							<%= type.name.html_safe %>	
 						</div>
 					</div>					
+				</div>
+				<% end %>
+				<% end %>
+				<% else %>
+				<div class="cl-scdl-lst bg-light-gray" align="center">
+					<b>No Upcoming matches, please visit again</b>					
 				</div>
 				<% end %>
 			</div>

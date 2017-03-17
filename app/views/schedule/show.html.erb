@@ -34,7 +34,7 @@
 
 	<body id="page-top" class="index">
 			
-		<%= render 'schedules_section' ,  @matchCalendar %>
+		<%= render partial: 'schedules_section' ,  locals: { schedule: @matchCalendar.schedule , schedule_count: @matchCalendar.schedule_count } %>
 	
 		<%= render 'home/footer' %>
 
