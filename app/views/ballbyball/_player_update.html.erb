@@ -1,0 +1,136 @@
+<% isbatsman = false %>
+<% isbowler = false %>
+
+<% if @ballbyball.present? && @ballbyball['data'].present? && @ballbyball['data']['data'].present? %>
+
+<%  for ball in @ballbyball['data']['data'] %>
+	<% if !isbatsman %>
+	<div class="cl-min-inf">
+		<% if ball['batsman'] != nil %>
+		<div class="cl-min-hdr-rw">
+			<div class="cl-txt-50">
+				Batsman
+			</div>
+			<div class="cl-txt-10">
+				R
+			</div>
+			<div class="cl-txt-10">
+				B
+			</div>
+			<div class="cl-txt-8">
+				4s
+			</div>
+			<div class="cl-txt-8">
+				6s
+			</div>
+			<div class="cl-txt-14">
+				SR
+			</div>
+		</div>
+		
+		<% end %>
+
+		<!-- batsmen loop -->
+		<% if ball['batsman'] != nil %>
+		<% ball['batsman'].each do |batsman| %>
+
+		<div class="cl-min-itm-rw">
+			<div class="cl-txt-50">
+				<% player_name = getPlayerName(@ballbyball, batsman['old_player_id'] ) %>
+				<%= link_to player_name , {:controller => "playerstat", :action => "show", :pid => batsman['pid']  }  %>
+			</div>
+			<div class="cl-btmn-data-10">
+				<%= batsman['runs']%>
+			</div>
+			<div class="cl-btmn-data-10" >
+				<%= batsman['balls_faced']%>
+			</div>
+			<div class="cl-btmn-data-8" >
+				<%= batsman['fours']%>
+			</div>
+			<div class="cl-btmn-data-8" >
+				<%= batsman['sixes']%>
+			</div>
+			<div class="cl-txt-14" >
+				<%if batsman['balls_faced'].to_i != 0 %>
+				<%= ((batsman['runs'].to_f / batsman['balls_faced'].to_f) *100).to_i %>
+				<% else %>
+				<%= 0 %>
+				<% end%>
+			</div>
+		</div>
+
+		<% end %>
+		<% isbatsman = true %>
+		<% end %>
+		<!-- batsmen loop ends -->
+
+	</div>
+
+	<% end %>
+	<!--balls loop -->
+
+	<% if !isbowler %>
+	<!-- bowler -->
+	<div class="cl-min-inf" ng-if="">
+		<% if ball['bowler'] != nil %>
+		<div class="cl-min-hdr-rw">
+			<div class="cl-txt-50">
+				Bowler
+			</div>
+			<div class="cl-txt-10">
+				O
+			</div>
+			<div class="cl-txt-8">
+				M
+			</div>
+			<div class="cl-txt-10">
+				R
+			</div>
+			<div class="cl-txt-8">
+				W
+			</div>
+			<div class="cl-txt-14">
+				ECO
+			</div>
+		</div>
+		<% end %>
+		<!-- bolwer loop -->
+		<% if ball['bowler'] != nil %>
+		<% for bowler in ball['bowler'] %>
+
+		<div class="cl-min-itm-rw">
+			<div class="cl-txt-50">
+				<% player_name = getPlayerName(@ballbyball, bowler['old_player_id'] ) %>
+				<%= link_to player_name , {:controller => "playerstat", :action => "show", :pid => bowler['pid']  }  %>
+			</div>
+			<div class="cl-txt-10">
+				<%= bowler['overs']%>
+			</div>
+			<div class="cl-txt-8">
+				<%= bowler['maidens']%>
+			</div>
+			<div class="cl-txt-10" >
+				<%= bowler['conceded']%>
+			</div>
+			<div class="cl-txt-8" >
+				<%= bowler['wickets']%>
+			</div>
+			<div class="cl-txt-14">
+				<% if bowler['overs'].to_i != 0%>
+				<%= (bowler['conceded'].to_f / bowler['overs'].to_f ).round(1) %>
+				<% else %>
+				<%= 0 %>
+				<% end%>
+			</div>
+		</div>
+
+		<%end%>
+		<% isbowler = true %>
+		<%end%>
+	</div>
+	<% end %>
+	<!-- bolwer loop ends -->
+	<!-- end bowler -->
+	<% end %>
+<% end %>

@@ -1,0 +1,168 @@
+// // Place all the styles related to the cricket controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// for news_page
+
+.green {
+    background: #60ab59;
+}
+
+.black {
+  background: #000000;
+}
+.cb-hm-exprt-hdr {
+    background: #CE6B70;
+    color: #fff;
+    margin: 0 -15px;
+    padding: 3px 15px;
+}
+.cl-news-box {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+}
+
+.cl-match-box {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.cl-nws-lst {
+  width: 67%;
+  padding-left: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;  
+}
+
+.cl-nws-ttl {
+  padding-bottom: 5px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.cl-nws-intr {
+  color: #666;
+  padding-bottom: 5px;
+}
+
+.cl-nws-hdln-ancr {
+  padding-bottom: 5px;
+}
+
+//for schedules
+
+.cl-scdl-box{
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+}
+
+.cl-scdl-lst{ 
+  width: 100%;
+  padding-left: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px; 
+  background: #fff;
+  padding: 20px 0;
+}
+
+.cl-scdl-date{ 
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  width: 33%;
+}
+
+.cl-scdl-hdln{
+  font-size: 18px; 
+  line-height: 24px;
+}
+
+.cl-scdl-hdln-ancr {
+  padding-bottom: 5px;
+}
+
+.cl-scdl-cntr{
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  width: 67%;
+  padding-left: 10px;
+}
+
+.cl-scdl-intr{
+  color: #666;
+  padding-bottom: 5px;
+}
+
+// for live scores
+
+.cl-lst-mtch {
+  list-style: none;
+  margin-left: 5px;
+  padding-bottom: 5px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.cl-scg-srs-nm {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 250px;
+    padding-top: 5px;
+    color: #d1d1d1;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+.cl-mtch-all {
+    opacity: 1;
+    padding: 0 0 10px;   
+}
+
+.cl-nt-live {
+  opacity: 0.4!important;
+}
+
+.cl-nt-today {
+  opacity: 0.4!important;
+}
+
+.cl-mm-mtch-tm {
+  font-size: 13px;
+  color: #fff;
+} 
+
+.cl-mm-liv-tag {
+  font-size: 10px;
+  color: #FB7D8D;
+}
+ 
+.cl-mm-mtch-nm {
+  font-size: 11px;
+  color: #d1d1d1;
+}

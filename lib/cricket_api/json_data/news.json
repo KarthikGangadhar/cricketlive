@@ -1,0 +1,116 @@
+{
+  "statusCode": 200,
+  "message": "cricket news",
+  "data": {
+    "data": [
+      {
+        "title": "Powell's maiden ton makes it two in two for Leewards",
+        "description": "Kieran Powell's century took Leeward Islands to their second win, while Trinidad &amp; Tobago skirted past Windward Islands by two wickets",
+        "unique_id": "1079826"
+      },
+      {
+        "title": "Stuart Law named West Indies coach",
+        "description": "Former Australia batsman Stuart Law has agreed to become the next West Indies head coach on a two-year contract",
+        "unique_id": "1079821"
+      },
+      {
+        "title": "Lancashire defend system after double Kolpak deal",
+        "description": "Lancashire have pulled off a double Kolpak deal which sees Shivnarine Chanderpaul and Dane Vilas shore up the batting ranks at Old Trafford",
+        "unique_id": "1079802"
+      },
+      {
+        "title": "Morris wants to give South Africa 'a full go'",
+        "description": "South Africa lost a seventh recent Test cap in Dane Vilas to a Kolpak deal on Friday, but have been given a reassurance that allrounder Chris Morris is not considering becoming the eighth",
+        "unique_id": "1079797"
+      },
+      {
+        "title": "Kumara, Sanjaya, Vandersay added to SL ODI squad",
+        "description": "Sri Lanka have made three late changes to their ODI squad in South Africa, announcing the inclusions of Lahiru Kumara, Vikum Sanjaya and the legspinner Jeffrey Vandersay on the eve of the first match in Port Elizabeth",
+        "unique_id": "1079791"
+      },
+      {
+        "title": "Hales ruled out of West Indies ODI tour",
+        "description": "Alex Hales has been ruled out of England's one-day squad for their three-ODI tour of the Caribbean in March, after suffering a broken hand",
+        "unique_id": "1079785"
+      },
+      {
+        "title": "Gauhar, Iftikhar tons lead Peshawar to title",
+        "description": "Unbeaten centuries from Gauhar Ali and Iftikhar Ahmed crushed Karachi Whites and gave Peshawar the Regional One Day Cup in Karachi",
+        "unique_id": "1079784"
+      },
+      {
+        "title": "Haseeb and Duckett named in MCC squad",
+        "description": "Haseeb Hameed and Ben Duckett, both of whom opened for England on the recent Test tour of India, have been named in MCC's squad to face Middlesex",
+        "unique_id": "1079772"
+      },
+      {
+        "title": "Strengthened South Africa provide daunting challenge",
+        "description": "ESPNcricinfo previews the opening one-day international between South Africa and Sri Lanka",
+        "unique_id": "1079771"
+      },
+      {
+        "title": "A title clash between the strongest teams of the competition",
+        "description": "The Sydney Sixers and the Perth Scorchers, the top two teams from the league stages of the second Women's Big Bash League, etched out dominant wins in the semi-finals",
+        "unique_id": "1079759"
+      },
+      {
+        "title": "Voges, Henriques back expanded Big Bash League",
+        "description": "Adam Voges and Moises Henriques have thrown their support behind the decision to expand the Big Bash League to 10-games-a-team ahead of the seventh edition",
+        "unique_id": "1079730"
+      },
+      {
+        "title": "Lungi Ngidi to miss ODIs against Sri Lanka with abdomen injury",
+        "description": "South Africa fast bowler Lungi Ngidi will miss the five ODIs against Sri Lanka because of an abdominal injury",
+        "unique_id": "1079727"
+      },
+      {
+        "title": "Scorchers in quest for third title",
+        "description": "While the Perth Scorchers have hit the straps at the right time, with dominant wins in the last week, the Sydney Sixers have had a more chaotic build-up, with a Super Over in the semi-final",
+        "unique_id": "1079720"
+      },
+      {
+        "title": "Warner becomes No. 1 ODI batsman, Azam breaks into top 10",
+        "description": "David Warner overtook AB de Villiers and Virat Kohli on the ICC's ODI rankings to become the top-ranked ODI batsman for the first time in his career",
+        "unique_id": "1079716"
+      },
+      {
+        "title": "Azhar given one-match suspension for slow over rate",
+        "description": "Pakistan's current ODI captain will miss the side's next fixture in the format, against West Indies in April-May 2017",
+        "unique_id": "1079709"
+      },
+      {
+        "title": "Wade to captain Australia, Smith injured",
+        "description": "Steven Smith has been ruled out of Australia's tour of New Zealand due to an ankle injury, with Matthew Wade set to act as stand-in captain",
+        "unique_id": "1079693"
+      },
+      {
+        "title": "Big Bash League set for expansion",
+        "description": "The BBL will expand from 35 games to 43 next season",
+        "unique_id": "1079689"
+      },
+      {
+        "title": "CCC beat ICC Americas to stay unbeaten, Jamaica upend Guyana",
+        "description": "Combined Campuses and Colleges made it two from two to start Group B at the Regional Super50, while Jamaica downed Guyana in the late match at Kensington Oval",
+        "unique_id": "1079701"
+      },
+      {
+        "title": "'Would like to bat as high as possible' - Travis Head",
+        "description": "Following his record-breaking opening stand with David Warner, Travis Head is hoping to get more chances up the order\n",
+        "unique_id": "1079684"
+      },
+      {
+        "title": "'A pretty complete performance' - Morgan",
+        "description": "Eoin Morgan hailed his bowlers' collective effort after they set up a seven-wicket win, which the captain called a 'pretty complete performance' during the first T20 in Kanpur",
+        "unique_id": "1079679"
+      }
+    ],
+    "cache": false,
+    "v": "1",
+    "ttl": 493,
+    "provider": {
+      "source": "Various",
+      "url": "https://cricapi.com/",
+      "pubDate": "2017-01-28T05:56:10.050Z"
+    }
+  }
+}

@@ -1,0 +1,233 @@
+<style>
+
+	.playercard h2 {
+		color: #0054df;
+		font-weight: bold;
+	}
+
+	.playercard table {
+		background: #fff;
+	}
+</style>
+<!-- Portfolio Modal 1 -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+						<div class="modal-body">
+							<!-- Project Details Go Here -->
+							<div class="row">
+								<div style="background: url(/assets/black.jpg); border-radius: 10px;" class="col-lg-12 col-md-12 col-xs-12 col-sm-12 playercard" itemscope="" itemtype="http://schema.org/Person">
+									<!-- <center> -->
+
+									<img src=<%= @playerStats['data']['imageURL']%> alt="<%= @playerStats['data']['name']%>" title="<%= @playerStats['data']['name']%>" class="img-thumbnail img-rounded" itemprop="image">
+
+									<h2 itemprop="name"><img src="http://cdn.cricapi.com/country/Flag%20Of%20India.png" alt="India" title="India" height="48" style="margin-right:5px;"> <%= @playerStats['data']['name']%></h2>
+									<!-- </center> -->
+									<table class="table table-striped col-lg-12 col-md-12 col-xs-12 col-sm-12">
+
+										<tbody>
+											<tr>
+												<th>Plays for</th>
+												<td colspan="2" itemprop="nationality"><%= @playerStats['data']['country']%></td>
+											</tr>
+
+											<tr>
+												<th>Age</th>
+												<td colspan="2"><%= @playerStats['data']['currentAge']%> </td>
+											</tr>
+
+											<tr>
+												<th>Born</th>
+												<td colspan="2"><%= @playerStats['data']['born']%></td>
+											</tr>
+
+											<tr>
+												<th>Batting Style</th>
+												<td colspan="2"><%= @playerStats['data']['battingStyle']%></td>
+											</tr>
+
+											<tr>
+												<th>Bowling Style</th>
+												<td colspan="2"><%= @playerStats['data']['bowlingStyle']%></td>
+											</tr>
+
+											<tr>
+												<td colspan="2"> <%= @playerStats['data']['profile']%> </td>
+											</tr>
+
+										</tbody>
+									</table>
+
+									<table class="table table-striped col-lg-12 col-md-12 col-xs-12 col-sm-12">
+										<tbody>
+											<tr>
+												<th colspan="3">Major Teams Affiliated With</th>
+											</tr>
+
+											<tr>
+												<!-- for each loop starts here-->
+												<% majorTeams = @playerStats['data']['majorTeams'].split(",")%>
+												<% majorTeams.each do |team| %>
+												<td><%= team %></td>
+												<% end %>
+												<!-- for each loop ends here-->
+											</tr>
+											
+										</tbody>
+									</table>
+
+									<h3>Batting Performance</h3>
+									<table class="table table-striped col-lg-12 col-md-12 col-xs-12 col-sm-12">
+										<tbody>
+											<tr>
+												<th>League</th>
+												<th>50</th>
+												<th>100</th>
+												<th>St</th>
+												<th>Ct</th>
+												<th>6s</th>
+												<th>4s</th>
+												<th>Ave</th>
+												<th>HS</th>
+												<th>Runs</th>
+												<th>NO</th>
+												<th>Inns</th>
+												<th>Mat</th>
+
+											</tr>
+											<!-- for each loop starts here-->
+												<% batting = @playerStats['data']['data']['batting']%>
+												<% batting.each do |type| %>
+												
+												<tr>
+												<th><%= type[0] %></th>
+												<td><%= type[1]['50'] %></td>
+												<td><%= type[1]['100'] %></td>
+												<td><%= type[1]['St'] %></td>
+												<td><%= type[1]['Ct'] %></td>
+												<td><%= type[1]['6s'] %></td>
+												<td><%= type[1]['4s'] %></td>
+												<td><%= type[1]['Ave'] %></td>
+												<td><%= type[1]['HS'] %></td>
+												<td><%= type[1]['Runs'] %></td>
+												<td><%= type[1]['NO'] %></td>
+												<td><%= type[1]['Inns'] %></td>
+												<td><%= type[1]['Mat'] %></td>
+												</tr>
+												<% end %>
+											<!-- for each loop ends here-->
+											
+										</tbody>
+									</table>
+
+									<h3>Bowling Performance</h3>
+									<table class="table table-striped col-lg-12 col-md-12 col-xs-12 col-sm-12">
+										<tbody>
+											<tr>
+												<th>League</th>
+												<th>10</th>
+												<th>5w</th>
+												<th>4w</th>
+												<th>Econ</th>
+												<th>Ave</th>
+												<th>BBM</th>
+												<th>BBI</th>
+												<th>Wkts</th>
+												<th>Runs</th>
+												<th>Balls</th>
+												<th>Inns</th>
+												<th>Mat</th>
+
+											</tr>
+											
+											<!-- for each loop starts here-->
+												<% bowling = @playerStats['data']['data']['bowling']%>
+												<% bowling.each do |type| %>
+												
+												<tr>
+												<th><%= type[0] %></th>
+												<td><%= type[1]['10'] %></td>
+												<td><%= type[1]['5w'] %></td>
+												<td><%= type[1]['4w'] %></td>
+												<td><%= type[1]['Econ'] %></td>
+												<td><%= type[1]['Ave'] %></td>
+												<td><%= type[1]['BBM'] %></td>
+												<td><%= type[1]['BBI'] %></td>
+												<td><%= type[1]['Wkts'] %></td>
+												<td><%= type[1]['Runs'] %></td>
+												<td><%= type[1]['Balls'] %></td>
+												<td><%= type[1]['Inns'] %></td>
+												<td><%= type[1]['Mat'] %></td>
+												</tr>
+												<% end %>
+											<!-- for each loop ends here-->
+																
+										</tbody>
+									</table>
+
+								</div>
+
+							</div>
+							<!-- Project Details ends Here -->
+							<table class="table">
+								<tbody>
+									<tr>
+									<td align="center"><button type="button" class="btn btn-primary" data-dismiss="modal">
+										<i class="fa fa-times"></i> Return
+										</button>
+							</td>
+									</tr>
+									</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Portfolio Modal 6 -->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="close-modal" data-dismiss="modal">
+				<div class="lr">
+					<div class="rl"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+						<div class="modal-body">
+							<!-- Project Details Go Here -->
+							<h2>Project Name</h2>
+							<p class="item-intro text-muted">
+								Lorem ipsum dolor sit amet consectetur.
+							</p>
+							<img class="img-responsive img-centered" src="assets/portfolio/dreams-preview.png" alt="">
+							<p>
+								Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.
+							</p>
+							<p>
+								You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.
+							</p>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">
+								<i class="fa fa-times"></i> Close Project
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

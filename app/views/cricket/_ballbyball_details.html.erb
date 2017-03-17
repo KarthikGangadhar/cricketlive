@@ -1,0 +1,183 @@
+<div class="cb-col-67 cb-col">
+	<%  @ballbyball['data']['data'].each do |ball| %>
+
+	<div class="cb-min-inf cb-col-100 ng-scope" ng-if="match.miniscore.batsman">
+		<% if ball['batsman'] != nil %>
+		<div class="cb-col cb-col-100 cb-min-hdr-rw cb-bg-gray">
+			<div class="cb-col cb-col-50">
+				Batsman
+			</div>
+			<div class="cb-col cb-col-10 text-right">
+				R
+			</div>
+			<div class="cb-col cb-col-10 text-right">
+				B
+			</div>
+			<div class="cb-col cb-col-8 text-right">
+				4s
+			</div>
+			<div class="cb-col cb-col-8 text-right">
+				6s
+			</div>
+			<div class="cb-col cb-col-14 text-right">
+				SR
+			</div>
+		</div>
+		<% end %>
+
+		<!-- batsmen loop -->
+		<% if ball['batsman'] != nil %>
+		<% ball['batsman'].each do |batsman| %>
+
+		<div class="cb-col cb-col-100 cb-min-itm-rw ng-scope" ng-repeat="batsmen in match.miniscore.batsman">
+			<div class="cb-col cb-col-50">
+				<a class="cb-text-link ng-binding" ng-href="/profiles/10694/henry-nicholls" ng-bind="batsmen.full_name" href="/profiles/10694/henry-nicholls"><%= getPlayerName(@ballbyball, batsman['old_player_id'] ) %></a>
+			</div>
+			<div class="cb-col cb-col-10 ab text-right ng-binding" ng-bind="batsmen.r">
+				<%= batsman['runs']%>
+			</div>
+			<div class="cb-col cb-col-10 ab text-right ng-binding" ng-bind="batsmen.b">
+				<%= batsman['balls_faced']%>
+			</div>
+			<div class="cb-col cb-col-8 ab text-right ng-binding" ng-bind="batsmen['4s']">
+				<%= batsman['fours']%>
+			</div>
+			<div class="cb-col cb-col-8 ab text-right ng-binding" ng-bind="batsmen['6s']">
+				<%= batsman['sixes']%>
+			</div>
+			<div class="cb-col cb-col-14 text-right ng-binding" ng-bind="batsmen.sr">
+				<%if batsman['balls_faced'].to_i != 0 %>
+				<%= ((batsman['runs'].to_f / batsman['balls_faced'].to_f) *100).to_i %>
+				<% else %>
+				<%= 0 %>
+				<% end%>
+			</div>
+		</div>
+
+		<% end %>
+		<% end %>
+		<!-- batsmen loop ends -->
+
+	</div>
+
+	<!--balls loop -->
+
+	<!-- bowler -->
+	<div class="cb-min-inf cb-col-100 ng-scope" ng-if="match.miniscore.bowler">
+		<% if ball['bowler'] != nil %>
+		<div class="cb-col cb-col-100 cb-min-hdr-rw cb-bg-gray">
+			<div class="cb-col cb-col-50">
+				Bowler
+			</div>
+			<div class="cb-col cb-col-10 text-right">
+				O
+			</div>
+			<div class="cb-col cb-col-8 text-right">
+				M
+			</div>
+			<div class="cb-col cb-col-10 text-right">
+				R
+			</div>
+			<div class="cb-col cb-col-8 text-right">
+				W
+			</div>
+			<div class="cb-col cb-col-14 text-right">
+				ECO
+			</div>
+		</div>
+		<% end %>
+		<!-- bolwer loop -->
+		<% if ball['bowler'] != nil %>
+		<% ball['bowler'].each do |bowler| %>
+
+		<div class="cb-col cb-col-100 cb-min-itm-rw ng-scope" ng-repeat="bowler in match.miniscore.bowler">
+			<div class="cb-col cb-col-50">
+				<a class="cb-text-link ng-binding" ng-href="/profiles/8224/kamrul-islam-rabbi" ng-bind="bowler.full_name" href="/profiles/8224/kamrul-islam-rabbi"><%= getPlayerName(@ballbyball, bowler['old_player_id'] ) %></a>
+			</div>
+			<div class="cb-col cb-col-10 text-right ng-binding" ng-bind="bowler.o">
+				<%= bowler['overs']%>
+			</div>
+			<div class="cb-col cb-col-8 text-right ng-binding" ng-bind="bowler.m">
+				<%= bowler['maidens']%>
+			</div>
+			<div class="cb-col cb-col-10 text-right ng-binding" ng-bind="bowler.r">
+				<%= bowler['conceded']%>
+			</div>
+			<div class="cb-col cb-col-8 text-right ng-binding" ng-bind="bowler.w">
+				<%= bowler['wickets']%>
+			</div>
+			<div class="cb-col cb-col-14 text-right ng-binding" ng-bind="bowler.er">
+				<% if bowler['overs'].to_i != 0%>
+				<%= (bowler['conceded'].to_f / bowler['overs'].to_f ).round(1) %>
+				<% else %>
+				<%= 0 %>
+				<% end%>
+			</div>
+		</div>
+
+		<%end%>
+		<%end%>
+	</div>
+	<!-- bolwer loop ends -->
+	<!-- end bowler -->
+	<div class="cb-min-inf cb-col-100 ng-scope" ng-if="match.miniscore.bowler">
+		<% ball['ball'].each do |delivery| %>
+		<div id="comm_1485072283484" class="cb-col cb-col-100 ng-scope" ng-if="comm[ts].evt != 'over-break'">
+			<!-- ngIf: comm[ts].o_no != null || ( comm[ts].videoId != null && comm[ts].evt.indexOf('Plugin') < 0) -->
+			<div ng-if="comm[ts].o_no != null || ( comm[ts].videoId != null &amp;&amp; comm[ts].evt.indexOf('Plugin') < 0)" class="cb-col cb-col-8 text-bold ng-scope">
+				<!-- ngIf: comm[ts].o_no != null -->
+				<div ng-bind="comm[ts].o_no" ng-if="comm[ts].o_no != null" title="Jan 22, 2017 1:34:43 PM" class="cb-mat-mnu-wrp cb-ovr-num ng-binding ng-scope">
+					<%= delivery['overs_actual'] %>
+				</div><!-- end ngIf: comm[ts].o_no != null --><!-- ngIf: ($root.$GEO.country != 'US' && $root.$GEO.country != 'CA') && comm[ts].videoId != null && comm[ts].evt != 'wicket' --><!-- ngIf: comm[ts].videoId && comm[ts].evt != 'wicket' && ($root.$GEO.country == 'US' || $root.$GEO.country == 'CA') -->
+			</div><!-- end ngIf: comm[ts].o_no != null || ( comm[ts].videoId != null && comm[ts].evt.indexOf('Plugin') < 0) -->
+			<p ng-bind-html="comm[ts].comm" class="cb-com-ln ng-binding cb-col cb-col-90" ng-class="get_comm_class(comm[ts])" ng-hide="comm[ts].geo != null &amp;&amp; comm[ts].geo.length > 0 &amp;&amp; comm[ts].geo.indexOf($root.$GEO.country) == -1">
+				<%= delivery['players'] %>,	<%= delivery['text'].html_safe %>
+			</p>
+		</div>
+		<%end%>
+		<!--balls loop -->
+	</div>
+
+	<% end %>
+	<div>
+
+		<!-- loop through team-->
+		<%  @ballbyball['data']['team'].each do |team| %>
+		<!-- redundant required-->
+		<div class="cb-col cb-col-100 cb-ltst-wgt-hdr">
+			<div class="cb-col cb-col-100 cb-scrd-hdr-rw">
+				<span><%= team['team_name']%></span>
+			</div>
+			<div class="cb-col cb-col-100 cb-scrd-sub-hdr cb-bg-gray">
+				<div class="cb-col cb-col-27 text-bold">
+					Player
+				</div>
+				<div class="cb-col cb-col-33">
+					primary role
+				</div>
+				<div class="cb-col cb-col-8 text-right text-bold">
+					age
+				</div>
+			</div>
+			<!-- redundant required-->
+			<!-- need to loop-->
+			<%  team['player'].each do |player| %>
+
+			<div class="cb-col cb-col-100 cb-scrd-itms">
+				<div class="cb-col cb-col-27 ">
+					<a href="/profiles/8934/samit-gohel" title="View profile of Samit Gohel" class="cb-text-link"> <%= player['known_as'] %> </a>
+				</div>
+				<div class="cb-col cb-col-33">
+					<span class="text-gray"></span><%= player['player_primary_role'] %>
+				</div>
+				<div class="cb-col cb-col-8 text-right text-bold">
+					<%= player['age_years'] %>
+				</div>
+
+			</div>
+
+			<%end%>
+			<!-- end of loop -->
+		</div>
+		<% end %>
+		<!-- end of team loop -->

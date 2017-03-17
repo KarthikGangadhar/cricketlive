@@ -1,0 +1,895 @@
+{
+  "statusCode": 200,
+  "message": "Live cricket score",
+  "data": {
+    "matches": [
+      {
+        "unique_id": 1067856,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Kurunegala Youth Cricket Club",
+        "team-1": "Panadura Sports Club",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1024809,
+        "date": "2017-01-28T00:00:00.000Z",
+        "team-2": "Free State",
+        "team-1": "Northern Cape",
+        "matchStarted": true,
+        "squad": false
+      },
+      {
+        "unique_id": 1003601,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Warriors",
+        "team-1": "Knights",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1003605,
+        "date": "2017-01-28T00:00:00.000Z",
+        "team-2": "Cape Cobras",
+        "team-1": "Titans",
+        "matchStarted": true,
+        "squad": false
+      },
+      {
+        "unique_id": 1067814,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Galle Cricket Club",
+        "team-1": "Burgher Recreation Club",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1067813,
+        "date": "2017-01-28T00:00:00.000Z",
+        "team-2": "Bloomfield Cricket and Athletic Club",
+        "team-1": "Moors Sports Club",
+        "matchStarted": true,
+        "squad": false
+      },
+      {
+        "unique_id": 1067812,
+        "date": "2017-01-28T00:00:00.000Z",
+        "team-2": "Badureliya Sports Club",
+        "team-1": "Saracens Sports Club",
+        "matchStarted": true,
+        "squad": false
+      },
+      {
+        "unique_id": 1067865,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Sri Lanka Air Force Sports Club",
+        "team-1": "Kalutara Town Club",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1067864,
+        "date": "2017-01-28T00:00:00.000Z",
+        "team-2": "Lankan Cricket Club",
+        "team-1": "Police Sports Club",
+        "matchStarted": true,
+        "squad": false
+      },
+      {
+        "unique_id": 1067866,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Sri Lanka Ports Authority Cricket Club",
+        "team-1": "Sri Lanka Navy Sports Club",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1078127,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": true,
+        "team-2": "West Indies Under-19s",
+        "team-1": "Leeward Islands",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1078128,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Windward Islands",
+        "team-1": "Trinidad & Tobago",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 936159,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Sri Lanka",
+        "team-1": "South Africa",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1023649,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Sydney Sixers",
+        "team-1": "Perth Scorchers",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1064720,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Sydney Sixers Women",
+        "team-1": "Perth Scorchers Women",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1067818,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Nondescripts Cricket Club",
+        "team-1": "Colombo Cricket Club",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1067815,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Chilaw Marians Cricket Club",
+        "team-1": "Colts Cricket Club",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1067817,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Tamil Union Cricket and Athletic Club",
+        "team-1": "Ragama Cricket Club",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1067816,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Sinhalese Sports Club",
+        "team-1": "Sri Lanka Army Sports Club",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1051785,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Auckland",
+        "team-1": "Canterbury",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1051781,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Wellington",
+        "team-1": "Northern Districts",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1077476,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Sri Lanka Under-19s",
+        "team-1": "South Africa Under-19s",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1076153,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Baghlan Province Under-16s",
+        "team-1": "Khost Province Under-16s",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1076154,
+        "date": "2017-01-28T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Paktika Province Under-16s",
+        "team-1": "Logar Province Under-16s",
+        "matchStarted": true
+      },
+      {
+        "unique_id": 1034827,
+        "date": "2017-01-29T00:00:00.000Z",
+        "team-2": "England",
+        "team-1": "India",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1025009,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Free State",
+        "team-1": "Northern Cape",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079257,
+        "date": "2017-01-29T00:00:00.000Z",
+        "team-2": "Afghanistan A",
+        "team-1": "Zimbabwe A",
+        "matchStarted": false,
+        "squad": false
+      },
+      {
+        "unique_id": 1079281,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Jharkhand",
+        "team-1": "Assam",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079274,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Railways",
+        "team-1": "Madhya Pradesh",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079282,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Tripura",
+        "team-1": "Odisha",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079276,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Kerala",
+        "team-1": "Andhra",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079275,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Hyderabad (India)",
+        "team-1": "Goa",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079277,
+        "date": "2017-01-29T00:00:00.000Z",
+        "team-2": "Punjab",
+        "team-1": "Haryana",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079278,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Services",
+        "team-1": "Himachal Pradesh",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079279,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Mumbai",
+        "team-1": "Baroda",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079280,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Maharashtra",
+        "team-1": "Gujarat",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079283,
+        "date": "2017-01-29T00:00:00.000Z",
+        "team-2": "Uttar Pradesh",
+        "team-1": "Chhattisgarh",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079284,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Tamil Nadu",
+        "team-1": "Karnataka",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079285,
+        "date": "2017-01-29T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Jammu & Kashmir",
+        "team-1": "Delhi",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1020013,
+        "date": "2017-01-30T00:00:00.000Z",
+        "team-2": "Australia",
+        "team-1": "New Zealand",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079286,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Rajasthan",
+        "team-1": "Madhya Pradesh",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079288,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Goa",
+        "team-1": "Andhra",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079287,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Kerala",
+        "team-1": "Karnataka",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079289,
+        "date": "2017-01-30T00:00:00.000Z",
+        "team-2": "Punjab",
+        "team-1": "Delhi",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079290,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Services",
+        "team-1": "Jammu & Kashmir",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079292,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Mumbai",
+        "team-1": "Gujarat",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079291,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Saurashtra",
+        "team-1": "Maharashtra",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079293,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Vidarbha",
+        "team-1": "Chhattisgarh",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079294,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Tamil Nadu",
+        "team-1": "Hyderabad (India)",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079295,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Himachal Pradesh",
+        "team-1": "Haryana",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077977,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Johannesburg",
+        "team-1": "Nelson Mandela Metropolitan University",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077976,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Assupol TUKS (South Africa)",
+        "team-1": "North West University",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077978,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Western Cape",
+        "team-1": "University of Stellenbosch",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077979,
+        "date": "2017-01-30T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Cape Town",
+        "team-1": "University of Free State",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079258,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Afghanistan A",
+        "team-1": "Zimbabwe A",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079302,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Tripura",
+        "team-1": "Bengal",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079301,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Odisha",
+        "team-1": "Jharkhand",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079296,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Vidarbha",
+        "team-1": "Railways",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079298,
+        "date": "2017-01-31T00:00:00.000Z",
+        "team-2": "Karnataka",
+        "team-1": "Andhra",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079297,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Tamil Nadu",
+        "team-1": "Goa",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079300,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Himachal Pradesh",
+        "team-1": "Delhi",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079299,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Punjab",
+        "team-1": "Jammu & Kashmir",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079303,
+        "date": "2017-01-31T00:00:00.000Z",
+        "team-2": "Uttar Pradesh",
+        "team-1": "Rajasthan",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079304,
+        "date": "2017-01-31T00:00:00.000Z",
+        "team-2": "Kerala",
+        "team-1": "Hyderabad (India)",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079305,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Services",
+        "team-1": "Haryana",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077980,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Western Cape",
+        "team-1": "Assupol TUKS (South Africa)",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077981,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Cape Town",
+        "team-1": "North West University",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077984,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Nelson Mandela Metropolitan University",
+        "team-1": "University of Free State",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077983,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Cape Town",
+        "team-1": "University of Stellenbosch",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077982,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Johannesburg",
+        "team-1": "University of Western Cape",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077985,
+        "date": "2017-01-31T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Nelson Mandela Metropolitan University",
+        "team-1": "North West University",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 936161,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "Sri Lanka",
+        "team-1": "South Africa",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1034829,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "England",
+        "team-1": "India",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1036401,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "New South Wales",
+        "team-1": "Victoria",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1036405,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "Tasmania",
+        "team-1": "Queensland",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1036403,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "Western Australia",
+        "team-1": "South Australia",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079307,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Bengal",
+        "team-1": "Assam",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079306,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "Tripura",
+        "team-1": "Jharkhand",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079308,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Haryana",
+        "team-1": "Delhi",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079309,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Jammu & Kashmir",
+        "team-1": "Himachal Pradesh",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079311,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Gujarat",
+        "team-1": "Baroda",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079310,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "Saurashtra",
+        "team-1": "Mumbai",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079312,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "Services",
+        "team-1": "Punjab",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1077477,
+        "date": "2017-02-01T00:00:00.000Z",
+        "team-2": "Sri Lanka Under-19s",
+        "team-1": "South Africa Under-19s",
+        "matchStarted": false,
+        "squad": false
+      },
+      {
+        "unique_id": 1077987,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Cape Town",
+        "team-1": "Assupol TUKS (South Africa)",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077986,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Free State",
+        "team-1": "University of Stellenbosch",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077990,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Western Cape",
+        "team-1": "Nelson Mandela Metropolitan University",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077989,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Assupol TUKS (South Africa)",
+        "team-1": "University of Free State",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077988,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Johannesburg",
+        "team-1": "University of Stellenbosch",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077991,
+        "date": "2017-02-01T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Western Cape",
+        "team-1": "North West University",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1020015,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "Australia",
+        "team-1": "New Zealand",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1003607,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Knights",
+        "team-1": "Cape Cobras",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1003611,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Titans",
+        "team-1": "Dolphins",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1003609,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Lions",
+        "team-1": "Warriors",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079316,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "Jammu & Kashmir",
+        "team-1": "Haryana",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079313,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Uttar Pradesh",
+        "team-1": "Railways",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079315,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "Tamil Nadu",
+        "team-1": "Andhra",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079317,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Punjab",
+        "team-1": "Himachal Pradesh",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079314,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "Karnataka",
+        "team-1": "Hyderabad (India)",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079318,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": true,
+        "team-2": "Saurashtra",
+        "team-1": "Baroda",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079319,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Mumbai",
+        "team-1": "Maharashtra",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1079320,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "Rajasthan",
+        "team-1": "Chhattisgarh",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079322,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "Services",
+        "team-1": "Delhi",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1079321,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "Kerala",
+        "team-1": "Goa",
+        "matchStarted": false,
+        "squad": true
+      },
+      {
+        "unique_id": 1077993,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "University of Free State",
+        "team-1": "University of Johannesburg",
+        "matchStarted": false,
+        "squad": false
+      },
+      {
+        "unique_id": 1077992,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": false,
+        "team-2": "University of Cape Town",
+        "team-1": "University of Western Cape",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077994,
+        "date": "2017-02-02T00:00:00.000Z",
+        "team-2": "Nelson Mandela Metropolitan University",
+        "team-1": "University of Cape Town",
+        "matchStarted": false,
+        "squad": false
+      },
+      {
+        "unique_id": 1077996,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": false,
+        "team-2": "North West University",
+        "team-1": "University of Free State",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077995,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Assupol TUKS (South Africa)",
+        "team-1": "University of Stellenbosch",
+        "matchStarted": false
+      },
+      {
+        "unique_id": 1077997,
+        "date": "2017-02-02T00:00:00.000Z",
+        "squad": false,
+        "team-2": "Assupol TUKS (South Africa)",
+        "team-1": "University of Johannesburg",
+        "matchStarted": false
+      }
+    ],
+    "v": "1",
+    "ttl": 12,
+    "provider": {
+      "source": "Various",
+      "url": "https://cricapi.com/",
+      "pubDate": "2017-01-28T05:58:26.408Z"
+    }
+  }
+}

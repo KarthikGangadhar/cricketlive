@@ -1,0 +1,117 @@
+{
+  "statusCode": 200,
+  "message": "Live cricket score",
+  "data": {
+    "provider": {
+      "source": "Various",
+      "url": "https://cricapi.com/",
+      "pubDate": "2017-01-28T05:57:36.571Z"
+    },
+    "ttl": 4,
+    "v": "1",
+    "cache": true,
+    "data": [
+      {
+        "unique_id": "1067864",
+        "description": "Police Sports Club 26 * v Lankan Cricket Club 159/10 ",
+        "title": "Police Sports Club 26 * v Lankan Cricket Club 159/10 "
+      },
+      {
+        "unique_id": "1024809",
+        "description": "Northern Cape 109/10 &amp;  45/1 * v Free State 277/8 &amp;  236/10 ",
+        "title": "Northern Cape 109/10 &amp;  45/1 * v Free State 277/8 &amp;  236/10 "
+      },
+      {
+        "unique_id": "1003601",
+        "description": "Knights 431/10  v Warriors 244/7 *",
+        "title": "Knights 431/10  v Warriors 244/7 *"
+      },
+      {
+        "unique_id": "1003605",
+        "description": "Titans 195/10  v Cape Cobras 100/3 *",
+        "title": "Titans 195/10  v Cape Cobras 100/3 *"
+      },
+      {
+        "unique_id": "1067865",
+        "description": "Kalutara Town Club v Sri Lanka Air Force Sports Club",
+        "title": "Kalutara Town Club v Sri Lanka Air Force Sports Club"
+      },
+      {
+        "unique_id": "1067856",
+        "description": "Panadura Sports Club 309/10 * v Kurunegala Youth Cricket Club",
+        "title": "Panadura Sports Club 309/10 * v Kurunegala Youth Cricket Club"
+      },
+      {
+        "unique_id": "1067866",
+        "description": "Sri Lanka Navy Sports Club v Sri Lanka Ports Authority Cricket Club 221/6 *",
+        "title": "Sri Lanka Navy Sports Club v Sri Lanka Ports Authority Cricket Club 221/6 *"
+      },
+      {
+        "unique_id": "1067814",
+        "description": "Burgher Recreation Club v Galle Cricket Club 261/5 *",
+        "title": "Burgher Recreation Club v Galle Cricket Club 261/5 *"
+      },
+      {
+        "unique_id": "1067813",
+        "description": "Moors Sports Club v Bloomfield Cricket and Athletic Club 101/6 *",
+        "title": "Moors Sports Club v Bloomfield Cricket and Athletic Club 101/6 *"
+      },
+      {
+        "unique_id": "1067812",
+        "description": "Saracens Sports Club v Badureliya Sports Club 71/1 *",
+        "title": "Saracens Sports Club v Badureliya Sports Club 71/1 *"
+      },
+      {
+        "unique_id": "1064720",
+        "description": "Perth Scorchers Women 100/6 * v Sydney Sixers Women 124/5 ",
+        "title": "Perth Scorchers Women 100/6 * v Sydney Sixers Women 124/5 "
+      },
+      {
+        "unique_id": "1076153",
+        "description": "Khost Province Under-16s 72/3 * v Baghlan Province Under-16s",
+        "title": "Khost Province Under-16s 72/3 * v Baghlan Province Under-16s"
+      },
+      {
+        "unique_id": "1076154",
+        "description": "Logar Province Under-16s v Paktika Province Under-16s",
+        "title": "Logar Province Under-16s v Paktika Province Under-16s"
+      },
+      {
+        "unique_id": "1067818",
+        "description": "Colombo Cricket Club v Nondescripts Cricket Club 50 *",
+        "title": "Colombo Cricket Club v Nondescripts Cricket Club 50 *"
+      },
+      {
+        "unique_id": "1067815",
+        "description": "Colts Cricket Club v Chilaw Marians Cricket Club",
+        "title": "Colts Cricket Club v Chilaw Marians Cricket Club"
+      },
+      {
+        "unique_id": "1067817",
+        "description": "Ragama Cricket Club v Tamil Union Cricket and Athletic Club 22 *",
+        "title": "Ragama Cricket Club v Tamil Union Cricket and Athletic Club 22 *"
+      },
+      {
+        "unique_id": "1067816",
+        "description": "Sri Lanka Army Sports Club 49/2 * v Sinhalese Sports Club",
+        "title": "Sri Lanka Army Sports Club 49/2 * v Sinhalese Sports Club"
+      },
+      {
+        "unique_id": "936159",
+        "description": "South Africa v Sri Lanka",
+        "title": "South Africa v Sri Lanka"
+      },
+      {
+        "unique_id": "1077476",
+        "description": "South Africa Under-19s v Sri Lanka Under-19s",
+        "title": "South Africa Under-19s v Sri Lanka Under-19s"
+      },
+      {
+        "unique_id": "1023649",
+        "description": "Perth Scorchers v Sydney Sixers",
+        "title": "Perth Scorchers v Sydney Sixers"
+      }
+    ],
+    "cache2": true
+  }
+}

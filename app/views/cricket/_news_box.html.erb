@@ -1,0 +1,12 @@
+<% @news.each do |type| %>
+<div class="cl-news-box bg-light-gray">
+				<div class="cl-nws-lst">
+					<b class="cl-nws-ttl"><b class="cl-nws-hdln-ancr"
+					title="<%= type['title'].html_safe %>"><%= type['title'].html_safe %></b></b>
+					<div class="cl-nws-intr">
+						<%= type['description'].html_safe %>
+					</div>
+				</div>
+
+			</div>
+<% end %>

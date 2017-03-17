@@ -1,0 +1,28 @@
+<section id="livescores">
+	<div class="container ">
+		<div class="row text-center col-sm-10 col-sm-offset-1 green">
+			<h3>Live Scores</h3>
+		</div>
+		<div class="row col-sm-10 col-sm-offset-1 bg-light-gray">			
+			<% @cricket['data']['data'].each do |match|  %>
+					<div class="row">
+					<b><%= "#{ @liveUpdate[match['unique_id']]['data']['team-1'] } VS #{ @liveUpdate[match['unique_id']]['data']['team-2']}" %> </b>
+					</div>
+					<div class="row">
+					<%= @liveUpdate[match['unique_id']]['data']['type'] %>
+					</div>
+					<div class="row">
+					<%= @liveUpdate[match['unique_id']]['data']['innings-requirement'] %>
+					</div>
+					<div class="row">
+					<%= @liveUpdate[match['unique_id']]['data']['score'] %>
+					</div>
+					<div align="center">
+						<button class="btn btn-info">
+					<%= link_to "More" , {:controller => "ballbyball", :action => "show", :unique_id => match['unique_id'].to_s }  %>
+						</button>	
+					</div>	
+			<% end%>		
+		</div>
+	</div>
+</section>

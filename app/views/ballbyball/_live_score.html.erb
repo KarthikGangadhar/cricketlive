@@ -1,0 +1,12 @@
+<div class="cl-col-100 cl-news-box">
+				<% if (@cricketScore['data'].present? && @cricketScore['data']['score'].present?) %>
+				<div class="cl-com-ln">	
+					<b>	<%= @cricketScore['data']['score'].html_safe %> </b>
+				</div>
+				<% end %>
+				<% if (@cricketScore['data'].present? && @cricketScore['data']['innings-requirement'].present?) %>
+				<div class="cl-com-ln">	
+					<b> <%= @cricketScore['data']['innings-requirement'].html_safe  %> </b>
+				</div>	
+				<% end %>
+</div>

@@ -1,0 +1,204 @@
+<style>
+	.playercard h2 {
+		color: #0054df;
+		font-weight: bold;
+	}
+
+	.playercard table {
+		background: #fff;
+	}
+	
+	.padding {
+		padding-left: 0 !important;
+	}
+</style>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 padding">
+			<div class="modal-body">
+				<!-- Project Details Go Here -->
+				<div class="row">
+					<div style="background: url(/assets/black.jpg); border-radius: 10px;" class="col-sm-10 playercard padding" itemscope="" itemtype="http://schema.org/Person">
+						<!-- <center> -->
+						<div align="center" class="col-sm-10 col-sm-offset-1 padding">
+							<% if @playerStats['data']['imageURL'].present? %>
+						<img src=<%= @playerStats['data']['imageURL']%> alt="<%= @playerStats['data']['name']%>" title="<%= @playerStats['data']['name']%>" class="img-thumbnail img-rounded" itemprop="image">
+							<% else %>
+						<h4>No image found</h4>
+							<% end %>
+							<!-- http://cdn.cricapi.com/country/Flag%20Of%20Sri Lanka.png -->
+							<% if @playerStats['data']['country'].present? && (getTeamFlag(@playerStats['data']['country'])).present? %>
+						<h2 itemprop="name"><img src="<%= getTeamFlag(@playerStats['data']['country']).to_s %>" alt="India" title="India" height="48" style="margin-right:5px;"> <%= @playerStats['data']['name']%></h2>
+							<% end %>
+						</div>
+						<!-- </center> -->
+						<div class="col-sm-10 col-sm-offset-1 padding">
+						<table class="table table-striped">
+							
+							<tbody>
+								<tr>
+									<th>Country</th>
+									<td colspan="2" itemprop="nationality"><%= @playerStats['data']['country']%></td>
+								</tr>
+
+								<tr>
+									<th>Age</th>
+									<td colspan="2"><%= @playerStats['data']['currentAge']%> </td>
+								</tr>
+
+								<tr>
+									<th>Born</th>
+									<td colspan="2"><%= @playerStats['data']['born']%></td>
+								</tr>
+
+								<tr>
+									<th>Batting Style</th>
+									<td colspan="2"><%= @playerStats['data']['battingStyle']%></td>
+								</tr>
+
+								<tr>
+									<th>Bowling Style</th>
+									<td colspan="2"><%= @playerStats['data']['bowlingStyle']%></td>
+								</tr>
+
+								<tr>
+									<td colspan="2"> <%= @playerStats['data']['profile']%> </td>
+								</tr>
+
+							</tbody>
+						</table>
+						</div>
+
+						<div class="table-responsive col-sm-10 col-sm-offset-1 padding">
+						<table class="table table-striped">
+							<tbody>
+								<tr>
+									<th colspan="3">Major Teams Affiliated With</th>
+								</tr>
+
+								<tr>
+									<!-- for each loop starts here-->
+									<% majorTeams = @playerStats['data']['majorTeams'].split(",")%>
+									<% majorTeams.each do |team| %>
+									<td><%= team %></td>
+									<% end %>
+									<!-- for each loop ends here-->
+								</tr>
+
+							</tbody>
+						</table>
+						</div>
+						
+						<div align="center" class="col-sm-10 col-sm-offset-1 padding">
+						<h3>Batting Performance</h3>
+						</div>
+						
+						<div class="table-responsive col-sm-10 col-sm-offset-1 padding">
+						<table class="table table-striped">
+							<tbody>
+								<tr>
+									<th>League</th>
+									<th>Mat</th>
+									<th>Inns</th>
+									<th>NO</th>
+									<th>Runs</th>
+									<th>HS</th>
+									<th>Ave</th>
+									<th>4s</th>
+									<th>6s</th>
+									<th>Ct</th>
+									<th>St</th>
+									<th>100</th>
+									<th>50</th>									
+								</tr>
+								<!-- for each loop starts here-->
+							<% if  @playerStats['data']['data'].present? && @playerStats['data']['data']['batting'].present? %>
+								<% batting = @playerStats['data']['data']['batting']%>
+								<% batting.each do |type| %>
+
+								<tr>
+									<th><%= type[0] %></th>
+									<td><%= type[1]['Mat'] %></td>
+									<td><%= type[1]['Inns'] %></td>
+									<td><%= type[1]['NO'] %></td>
+									<td><%= type[1]['Runs'] %></td>
+									<td><%= type[1]['HS'] %></td>
+									<td><%= type[1]['Ave'] %></td>
+									<td><%= type[1]['4s'] %></td>
+									<td><%= type[1]['6s'] %></td>
+									<td><%= type[1]['Ct'] %></td>
+									<td><%= type[1]['St'] %></td>
+									<td><%= type[1]['100'] %></td>
+									<td><%= type[1]['50'] %></td>		
+								</tr>
+								<% end %>
+								
+								<% end %>
+								<!-- for each loop ends here-->
+
+							</tbody>
+						</table>
+						</div>
+						
+						<div align="center" class="col-sm-10 col-sm-offset-1 padding">
+						<h3>Bowling Performance</h3>
+						</div>
+						<div class="table-responsive col-sm-10 col-sm-offset-1 padding">
+						<table class="table table-striped">
+							<tbody>
+								<tr>
+									<th>League</th>
+									<th>Mat</th>
+									<th>Inns</th>
+									<th>Balls</th>
+									<th>Runs</th>
+									<th>Wkts</th>
+									<th>BBI</th>
+									<th>BBM</th>
+									<th>Ave</th>
+									<th>Econ</th>
+									<th>4w</th>
+									<th>5w</th>
+									<th>10</th>																
+								</tr>
+
+								<!-- for each loop starts here-->
+							<% if  @playerStats['data']['data'].present? && @playerStats['data']['data']['bowling'].present? %>
+								<% bowling = @playerStats['data']['data']['bowling']%>
+								<% bowling.each do |type| %>
+
+								<tr>
+									<th><%= type[0] %></th>
+									<td><%= type[1]['Mat'] %></td>
+									<td><%= type[1]['Inns'] %></td>
+									<td><%= type[1]['Balls'] %></td>
+									<td><%= type[1]['Runs'] %></td>
+									<td><%= type[1]['Wkts'] %></td>
+									<td><%= type[1]['BBI'] %></td>
+									<td><%= type[1]['BBM'] %></td>
+									<td><%= type[1]['Ave'] %></td>
+									<td><%= type[1]['Econ'] %></td>
+									<td><%= type[1]['4w'] %></td>
+									<td><%= type[1]['5w'] %></td>
+									<td><%= type[1]['10'] %></td>				
+								</tr>
+								<% end %>
+							<% end %>
+								<!-- for each loop ends here-->
+
+							</tbody>
+						</table>
+						</div>
+					</div>
+
+				</div>
+				<!-- Project Details ends Here -->
+				<%#<div align="center" class="col-sm-10 col-sm-offset-1 padding">			
+						<button type="button" class="btn btn-primary" data-dismiss="modal">
+								<i class="fa fa-times"></i> Return
+							</button></td>
+				</div>%>
+			</div>
+		</div>
+	</div>
+</div>

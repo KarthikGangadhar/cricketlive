@@ -1,0 +1,107 @@
+<style>
+#team_details {
+    padding: 75px 0 !important;
+}
+.title {
+	width: 104% !important;
+    left: -4% !important;
+}
+
+#live_updates {
+	padding: 75px 0 !important;
+}
+</style>
+<div class="cl-col-100">
+	<div id="live_updates">
+	<div class="col-sm-12 green title" align="center" >
+		<h4><%= @cricketScore['data']['team-1'] + " VS "+ @cricketScore['data']['team-2'] %></h4>	
+	</div>
+	<% is_added = false %>
+	<% if @ballbyball['data']['data'].present? %>
+	<%  @ballbyball['data']['data'].each do |ball| %>
+	<% if !ball['ball'].first['pre_text'].present? || strip_tags(ball['ball'].first['pre_text']).upcase != "\nUPDATES ONLY\n" %>
+	<% if !is_added %>
+	<%= render 'live_score' ,  @cricketScore %>
+	<%= render 'player_update' ,  @ballbyball %>
+	<% is_added = true%>
+	<% end %>
+	<%= render 'over_details',  locals: { ball: ball , ballbyball: @ballbyball} %>	
+	<% end %>
+	<div class="cl-min-inf" >
+		<% ball['ball'].each do |delivery| %>
+		<% if delivery['pre_text'].present? && strip_tags(delivery['pre_text']).upcase == "\nUPDATES ONLY\n" %>
+			<%= render 'live_score' ,  @cricketScore %>
+		<% else %>
+		<div id="comm_1485072283484" class="cl-col-100" >
+			<div class="cl-bold-8">
+				<div title="Jan 22, 2017 1:34:43 PM" class="cl-mat-mnu-wrp">
+					<%= delivery['overs_actual'] %>
+				</div>
+			</div>
+			<p class="cl-com-ln">
+				<!-- <%= "#{delivery['players']}, #{delivery['event'].html_safe} " %>  -->
+				<%= "#{delivery['players']}, #{delivery['event'].html_safe}. #{delivery['text'].html_safe} " %>
+				<% if delivery['event'] == "OUT"%>
+				<b><%= delivery['dismissal'].html_safe%> </b>
+				<% end %>
+			</p>
+		</div>
+		<% end %>
+		<%end%>
+		<!--balls loop -->
+	</div>
+
+	<% end %>
+	<% end %>
+	</div>
+	
+	<div>
+		<% if @ballbyball['data']['team'].present? %>
+		<!-- loop through team-->
+		<div id="team_details">
+		<%  @ballbyball['data']['team'].each do |team| %>
+		<!-- redundant required-->
+		<div class="cl-ltst-wgt-hdr">
+			<div class="cl-scrd-hdr-rw">
+				<span><%= team['team_name']%></span>
+			</div>
+			<div class="cl-scrd-sub-hdr">
+				<div class="cl-bold-27">
+					Player
+				</div>
+				<div class="cl-col-33">
+					primary role
+				</div>
+				<div class="cl-col-8">
+					age
+				</div>
+			</div>
+			<!-- redundant required-->
+			<!-- need to loop-->
+			<%  team['player'].each do |player| %>
+			<div class="cl-scrd-itms">
+				<div class="cl-col-27">
+						<!-- player['object_id'] -->
+						<% player_name = player['known_as']%>
+						<%= link_to player_name , {:controller => "playerstat", :action => "show", :pid => player['object_id']  }  %>
+				</div>
+				<div class="cl-col-33">
+					<span class="text-gray"></span><%= player['player_primary_role'] %>
+				</div>
+				<div class="cl-col-8">
+					<% if player['age_years'].to_i < 100 %>
+					<%= player['age_years'] %>
+					<% else %>
+					   -
+					<% end %>
+				</div>
+
+			</div>
+
+			<%end%>
+			<!-- end of loop -->
+		</div>
+		<% end %>
+		<% end %>
+		</div>
+		<!-- end of team loop -->
