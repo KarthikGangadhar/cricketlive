@@ -16,7 +16,6 @@ module BallbyballHelper
   def getTeamName(teams, tid)
 
     team_name = ""
-    binding.pry
     teams.each do |team|
         if team['team_id'] == tid
           team_name = team['team_filename']

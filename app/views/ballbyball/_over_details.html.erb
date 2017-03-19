@@ -1,25 +1,24 @@
-<% binding.pry %>
-<% if locals[:ball]["event_string"].present? &&  locals[:ball]["runs"].present?  && locals[:ball]["wickets"].present? %>
+<% if ball["event_string"].present? &&  ball["runs"].present?  && ball["wickets"].present? %>
 <div class="cl-com-ovr-sum-rw bg-light-gray">
 	<div class="cl-com-ovr-sum-itm-8" style="min-height:33px;">
-		<%= locals[:ball]["over_number"] %>
+		<%= ball["over_number"] %>
 	</div>
 	<div class="cl-com-ovr-sum-itm-25">
 		<div>
-			Runs Scored: <span class="cl-text-bold" ><%= locals[:ball]["event_string"] %></span>
+			Runs Scored: <span class="cl-text-bold" ><%= ball["event_string"] %></span>
 		</div>
 	</div>
 	<div class="cl-com-ovr-sum-itm-25">
-			Score after <%= locals[:ball]["over_number"] %> overs
+			Score after <%= ball["over_number"] %> overs
 		<div class="cl-text-bold" >
-			 <%= getTeamName( locals[:ballbyball] , locals[:ball]['team_id'])%> <%= locals[:ball]["runs"] %>-<%= locals[:ball]["wickets"]%>
+			 <%= getTeamName( team , ball['team_id'])%> <%= ball["runs"] %>-<%= ball["wickets"]%>
 		</div>
 	</div>
 	<div class="cl-com-ovr-sum-itm-25">
-		<% if locals[:ball]['batsman'].present? %>
-		<% locals[:ball]['batsman'].each do |batsman|%>
+		<% if ball['batsman'].present? %>
+		<% ball['batsman'].each do |batsman|%>
 			<div class="cl-col-67">
-				<%= getPlayerForOverUpdate(locals[:ballbyball], batsman['pid'])%>
+				<%= getPlayerForOverUpdate(team, batsman['pid'])%>
 			</div>
 			<div class="cl-col-binding">
 				<%= batsman['runs'] %>(<%= batsman['balls_faced'] %>)
@@ -28,11 +27,11 @@
 		<% end %>
 	</div>
 	<div class="cl-com-ovr-sum-itm-17">
-		<% if locals[:ball]['bowler'].present? %>
-		<% locals[:ball]['bowler'].each do |bowler|%>
+		<% if ball['bowler'].present? %>
+		<% ball['bowler'].each do |bowler|%>
 			<% if bowler['live_current_name'].upcase == "CURRENT BOWLER"%>
-			<div><%= getPlayerForOverUpdate(locals[:ballbyball], bowler['pid']) %></div>
-			<div><%= locals[:ball]['bowler'][0]['overs'] %>-<%= locals[:ball]['bowler'][0]['maidens'] %>-<%= locals[:ball]['bowler'][0]['wickets'] %>-<%= locals[:ball]['bowler'][0]['conceded'] %></div>
+			<div><%= getPlayerForOverUpdate(team, bowler['pid']) %></div>
+			<div><%= ball['bowler'][0]['overs'] %>-<%= ball['bowler'][0]['maidens'] %>-<%= ball['bowler'][0]['wickets'] %>-<%= ball['bowler'][0]['conceded'] %></div>
 			<% end %>
 		<% end %>	
 		<% end %>	

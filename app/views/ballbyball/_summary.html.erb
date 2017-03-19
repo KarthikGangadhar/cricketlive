@@ -19,22 +19,16 @@
 	</div>
 	<% end %>
 	
-	<% is_added = false %>
-	<% if balls.present? %>
-	<% binding.pry %>
-	<%  balls.each do |ball| %>
-	<% if !ball['ball'].first['pre_text'].present? || strip_tags(ball['ball'].first['pre_text']).upcase != "\nUPDATES ONLY\n" %>
-	<% if !is_added %>
-	
 	<% if data.matchScore.present? %>
 	<%= render partial: 'live_score' ,  locals: { liveScore: data.matchScore } %>
 	<% end %>
 	
 	<%= render partial: 'player_update' ,  locals: {batsmen: data.batsman , bowlers: data.bowler, team: data.teams } %>
 	
-	<% is_added = true%>
-	<% end %>
-	<% binding.pry%>
+	<% if balls.present? %>
+	<%  balls.each do |ball| %>
+	<% if !ball['ball'].first['pre_text'].present? || strip_tags(ball['ball'].first['pre_text']).upcase != "\nUPDATES ONLY\n" %>
+	
 	<%= render partial: 'over_details',  locals: { ball: ball , team: data.teams} %>	
 	<% end %>
 	<div class="cl-min-inf" >
@@ -66,10 +60,10 @@
 	</div>
 	
 	<div>
-		<% if @ballbyball['data']['team'].present? %>
+		<% if data.present? && data.teams.present?%>
 		<!-- loop through team-->
 		<div id="team_details">
-		<%  @ballbyball['data']['team'].each do |team| %>
+		<%  data.teams.each do |team| %>
 		<!-- redundant required-->
 		<div class="cl-ltst-wgt-hdr">
 			<div class="cl-scrd-hdr-rw">
