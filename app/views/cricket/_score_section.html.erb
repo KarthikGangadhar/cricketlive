@@ -1,3 +1,10 @@
+<style>
+	.scorecard{
+		padding-left:10px;
+		padding-bottom:5px;
+	}
+</style>
+
 <section id="livescores">
 	<div class="container ">
 		<div class="row text-center col-sm-10 col-sm-offset-1 green">
@@ -5,7 +12,8 @@
 		</div>
 		<div class="row col-sm-10 col-sm-offset-1 bg-light-gray">			
 			<% @cricket['data']['data'].each do |match|  %>
-					<div class="row">
+					<div class="scorecard">
+						<div class="row">
 					<b><%= "#{ @liveUpdate[match['unique_id']]['data']['team-1'] } VS #{ @liveUpdate[match['unique_id']]['data']['team-2']}" %> </b>
 					</div>
 					<div class="row">
@@ -22,6 +30,8 @@
 					<%= link_to "More" , {:controller => "ballbyball", :action => "show", :unique_id => match['unique_id'].to_s }  %>
 						</button>	
 					</div>	
+					</div>
+						
 			<% end%>		
 		</div>
 	</div>
