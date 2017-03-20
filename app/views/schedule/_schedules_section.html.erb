@@ -4,31 +4,14 @@
 			<h3>Schedule</h3>
 		</div>
 		<div class="row col-sm-10 col-sm-offset-1 bg-light-gray">
-
-			<div class="cl-scdl-box bg-light-gray">
-				<% if schedule.present? && schedule_count.present?%>
-				<% schedule.each do |type| %>
-				<% if type.present? && type.name.present? && type.date.present? %>
-				<div class="cl-scdl-lst bg-light-gray">
-					<div class="cl-scdl-date">
-						<b class="cl-scdl-hdln"><b class="cl-scdl-hdln-ancr"
-						title="<%= type.date.html_safe %>"><%= type.date.html_safe %></b></b>
-					</div>
-					<div class="cl-scdl-cntr">
-						<div class="cl-scdl-intr">
-							<%= type.name.html_safe %>	
-						</div>
-					</div>					
-				</div>
-				<% end %>
-				<% end %>
-				<% else %>
-				<div class="cl-scdl-lst bg-light-gray" align="center">
-					<b>No Upcoming matches, please visit again</b>					
-				</div>
-				<% end %>
+			<div id="schedule_date">	
+				<%= render partial: 'date_schedule' ,  locals: { schedule: schedule , schedule_count: schedule_count } %>
 			</div>
-
+			
+			<div id="schedule_team">
+				<%= render partial: 'team_schedule' ,  locals: { teams: teams , teams_schedule: teams_schedule } %>
+			</div>
+			</div>
 		</div>
 	</div>
 </section>

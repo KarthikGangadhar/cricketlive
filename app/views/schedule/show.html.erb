@@ -33,8 +33,9 @@
 	</head>
 
 	<body id="page-top" class="index">
-			
-		<%= render partial: 'schedules_section' ,  locals: { schedule: @matchCalendar.schedule , schedule_count: @matchCalendar.schedule_count } %>
+		<%= render partial: 'navigation', locals:{ teams: @matchCalendar.teams } %>
+		
+		<%= render partial: 'schedules_section' ,  locals: { schedule: @matchCalendar.schedule , schedule_count: @matchCalendar.schedule_count, teams: @matchCalendar.teams, teams_schedule: @matchCalendar.teams_schedule  } %>
 	
 		<%= render 'home/footer' %>
 

@@ -72,7 +72,6 @@ $('#name').focus(function() {
 });
 
 $('#prop_load_more').on('click', function(){
-	debugger;
 	var news_length = $('.cl-nws-lst').length;
 	slicer_length = 4;
 	var x = 1;
@@ -87,3 +86,17 @@ $('#prop_load_more').on('click', function(){
 	$('.cl-nws-lst').slice(news_length - (x * slicer_length)).addClass('hide');
 	x += 1;
 });
+
+$('#schedule_date').show();
+$('#schedule_team').hide();
+
+$('#team_schedule').on('click', function(){
+	$('#schedule_date').hide();
+	$('#schedule_team').show();
+});
+
+$('#date_schedule').on('click', function(){
+	$('#schedule_date').show();
+    $('#schedule_team').hide();
+});
+

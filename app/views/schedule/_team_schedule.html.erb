@@ -1,0 +1,43 @@
+<style>
+#team_name {
+	padding-bottom: 5px;
+	
+}
+</style>
+
+<div class="cl-scdl-box bg-light-gray">
+				<% if teams.present? && teams_schedule.present?%>
+				<% teams.each do |type| %>
+				<% if teams_schedule[type].present? && teams_schedule[type].length > 0 %>
+				<div id="#<%= type %>">
+				<div class="row text-center col-sm-12 green" id="team_name">
+					<h4><%= type %></h4>
+				</div>
+				
+				<% teams_schedule[type].each do |sch|%>
+				<% if sch.present? && sch.name.present? && sch.date.present? %>
+				<div class="cl-scdl-lst bg-light-gray">
+					<div class="cl-scdl-date">
+						<b class="cl-scdl-hdln"><b class="cl-scdl-hdln-ancr"
+						title="<%= sch.date.html_safe %>"><%= sch.date.html_safe %></b></b>
+					</div>
+					<div class="cl-scdl-cntr">
+						<div class="cl-scdl-intr">
+							<%= sch.name.html_safe %>	
+						</div>
+					</div>					
+				</div>
+				<% end %>
+				<% end %>
+				</div>
+				<% end %>
+				
+				<% end %>
+				
+				
+				<% else %>
+				<div class="cl-scdl-lst bg-light-gray" align="center">
+					<b>No Upcoming matches, please visit again</b>					
+				</div>
+				<% end %>
+				</div>

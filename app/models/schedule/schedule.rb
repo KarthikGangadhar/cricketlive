@@ -29,17 +29,19 @@ class Schedule
   end
   
   def teamslist
-    teams = ["Sri_Lanka",
-      "Bangladesh",
-      "India",
-      "Australia",
+    teams = [
       "Afghanistan",
+      "Australia",
+      "Bangladesh",
+      "England",
+      "India",
       "Ireland",
       "New_Zealand",
-      "South_Africa",
-      "West_Indies",
       "Pakistan",
-      "England"]
+      "Sri_Lanka",
+      "South_Africa",
+      "West_Indies"
+      ]
   end
   
   def get_teams_schedule
@@ -47,17 +49,17 @@ class Schedule
     teams = teamslist
     
     team_schedule = { 
-      "Sri_Lanka" => [],
-      "Bangladesh" => [],
-      "India" => [],
-      "Australia" => [],
       "Afghanistan" => [],
+      "Australia" => [],
+      "Bangladesh" => [],
+      "England" => [],
+      "India" => [],
       "Ireland" => [],
       "New_Zealand" => [],
-      "South_Africa" => [],
-      "West_Indies" => [],
       "Pakistan" => [],
-      "England" => []
+      "Sri_Lanka" => [],
+      "South_Africa" => [],
+      "West_Indies" => []
       } 
       
     if schedule.present? && teams.present?
