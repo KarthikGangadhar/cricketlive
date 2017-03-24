@@ -25,6 +25,9 @@
 					<div class="row">
 					<%= @liveUpdate[match['unique_id']]['data']['score'] %>
 					</div>
+					<!-- -->
+					<%= render partial: 'team_name', locals: { match: match, liveupdate: @liveUpdate} %>
+					<!-- -->
 					<div align="center">
 						<button class="btn btn-info">
 					<%= link_to "More" , {:controller => "ballbyball", :action => "show", :unique_id => match['unique_id'].to_s }  %>
