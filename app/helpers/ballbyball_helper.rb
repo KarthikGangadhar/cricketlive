@@ -38,4 +38,8 @@ module BallbyballHelper
 
   end
   
+  def getPlayerUrl(pid) 
+    url = PLAYER_URL + pid.to_s + ".jpg"
+    return url
+  end
 end
