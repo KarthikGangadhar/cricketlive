@@ -6,7 +6,7 @@
         <tbody>
             <tr>
                 <td class="_JX _AZc">
-                    <img class="lr_sns_ovo_hp_img lr-main-match-logo-img" id="/m/024nj1_uid_1" src="/assets/team_flags/India.jpg" alt="" data-deferred="1" onload="google.aft&amp;&amp;google.aft(this)">
+                    <img class="lr_sns_ovo_hp_img lr-main-match-logo-img" id="/m/024nj1_uid_1" src="<%= get_team_flag(liveupdate[match['unique_id']]['data']['team-1'])%>" alt="" data-deferred="1" >
                 </td>
                 <td class="_JX _WMb _aeb _KYh">
                     <div class="_dDh _YCh _V1h"><%= liveupdate[match['unique_id']]['data']['team-1'] %></div>
@@ -27,7 +27,7 @@
                         <div class="_dDh _YCh _V1h"><%= liveupdate[match['unique_id']]['data']['team-2'] %></div>
                     </td>
                     <td class="_JX _zZc">
-                        <img class="lr_sns_ovo_hp_img lr-main-match-logo-img" id="/m/020wyp_uid_2" src="/assets/team_flags/Australia.jpg" alt="" data-deferred="1" onload="google.aft&amp;&amp;google.aft(this)">
+                        <img class="lr_sns_ovo_hp_img lr-main-match-logo-img" id="/m/020wyp_uid_2" src="<%= get_team_flag(liveupdate[match['unique_id']]['data']['team-2'])%>" alt="" data-deferred="1" >
                     </td>
                 </tr>
             </tbody>

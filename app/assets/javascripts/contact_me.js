@@ -107,3 +107,46 @@ $('#date_schedule').on('click', function(){
     $('#schedule_team').hide();
 });
 
+$('#squard_details').addClass('hide');
+
+$('#squard_update_nav').on('click',function(){
+	if($('#match_details').hasClass('show')){
+		$('#match_details').removeClass('show');
+		$('#match_details').addClass('hide');
+	}
+	else{
+		$('#match_details').addClass('hide');
+	}
+	
+	if($('#squard_details').hasClass('hide')){
+		$('#squard_details').removeClass('hide');
+		$('#squard_details').addClass('show');
+	}
+	else{
+		$('#squard_details').addClass('show');
+	}
+});
+
+$('#live_update_nav').on('click',function(){
+	if($('#match_details').hasClass('hide')){
+		$('#match_details').removeClass('hide');
+		$('#match_details').addClass('show');
+	}
+	if($('#squard_details').hasClass('show')){
+		$('#squard_details').removeClass('show');
+		$('#squard_details').addClass('hide');
+	}
+});
+
+$('#team_detail_nav').on('click',function(){
+	if($('#match_details').hasClass('hide')){
+		$('#match_details').removeClass('hide');
+		$('#match_details').addClass('show');
+	}
+	if($('#squard_details').hasClass('show')){
+		$('#squard_details').removeClass('show');
+		$('#squard_details').addClass('hide');
+	}
+});
+
+

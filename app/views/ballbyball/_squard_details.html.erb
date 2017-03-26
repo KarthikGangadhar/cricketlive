@@ -1,0 +1,708 @@
+<style>
+	.columns {
+        position: relative;
+        padding-left: 0.46875rem;
+        padding-right: 0.46875rem;
+        float: left
+    }
+	
+	.large-1{width:5%}
+	.large-2{width:10%}
+	.large-3{width:15%}
+	.large-4{width:20%}
+	.large-5{width:25%}
+	.large-6{width:30%}
+	.large-7{width:35%}
+	.large-8{width:40%}
+	.large-9{width:45%}
+	.large-10{width:50%}
+	.large-11{width:55%}
+	.large-12{width:60%}
+	.large-13{width:65%}
+	.large-14{width:70%}
+	.large-15{width:75%}
+	.large-16{width:80%}
+	.large-17{width:85%}
+	.large-18{width:90%}
+	.large-19{width:95%}
+	.large-20{width:100%}
+	
+	.medium-1{width:5%}
+	.medium-2{width:10%}
+	.medium-3{width:15%}
+	.medium-4{width:20%}
+	.medium-5{width:25%}
+	.medium-6{width:30%}
+	.medium-7{width:35%}
+	.medium-8{width:40%}
+	.medium-9{width:45%}
+	.medium-10{width:50%}
+	.medium-11{width:55%}
+	.medium-12{width:60%}
+	.medium-13{width:65%}
+	.medium-14{width:70%}
+	.medium-15{width:75%}
+	.medium-16{width:80%}
+	.medium-17{width:85%}
+	.medium-18{width:90%}
+	.medium-19{width:95%}
+	.medium-20{width:100%}
+	
+	.small-1{width:5%}
+	.small-2{width:10%}
+	.small-3{width:15%}
+	.small-4{width:20%}
+	.small-5{width:25%}
+	.small-6{width:30%}
+	.small-7{width:35%}
+	.small-8{width:40%}
+	.small-9{width:45%}
+	.small-10{width:50%}
+	.small-11{width:55%}
+	.small-12{width:60%}
+	.small-13{width:65%}
+	.small-14{width:70%}
+	.small-15{width:75%}
+	.small-16{width:80%}
+	.small-17{width:85%}
+	.small-18{width:90%}
+	.small-19{width:95%}
+	.small-20{width:100%}
+	
+	@media only screen {
+
+    .small-block-grid-2>li {
+        width: 50%;
+        list-style: none
+    }
+    .small-block-grid-2>li:nth-of-type(n) {
+        clear: none
+    }
+    .small-block-grid-2>li:nth-of-type(2n+1) {
+        clear: both
+    }
+}
+@media only screen and (min-width: 768px) {
+    .medium-block-grid-2>li {
+        width: 50%;
+        list-style: none
+    }
+    .medium-block-grid-2>li:nth-of-type(n) {
+        clear: none
+    }
+    .medium-block-grid-2>li:nth-of-type(2n+1) {
+        clear: both
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .large-block-grid-2>li {
+        width: 50%;
+        list-style: none
+    }
+    .large-block-grid-2>li:nth-of-type(n) {
+        clear: none
+    }
+    .large-block-grid-2>li:nth-of-type(2n+1) {
+        clear: both
+    }
+    
+.squads_main h1 {
+    padding: 20px 30px 20px 0;
+    font-size: 18px;
+    border-bottom: 5px solid #e1e1e1;
+    margin: 0 25px
+}
+.squads_main .bdr_left {
+    border-left: 1px solid #e1e1e1;
+    margin-left: -1px;
+    border-right: 0px
+}
+.squads_main ul {
+    margin-top: 30px
+}
+.squads_main ul li {
+    border-right: 1px solid #e1e1e1;
+    padding: 0px 15px 40px 15px;
+    line-height: 16px
+}
+.squads_main ul li div {
+    float: left !important
+}
+.squads_main ul li div h3 {
+    color: #333333;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 15px
+}
+.squads_main ul li div h3 a {
+    color: #333333
+}
+.squads_main ul li div h3 span {
+    display: block;
+    font-size: 14px;
+    margin: 0;
+    text-transform: capitalize;
+    margin-top: 5px
+}
+.squads_main ul li div span {
+    display: block;
+    color: #333;
+    font-size: 12px;
+    margin: 15px 0
+}
+.squads_main ul li div span b {
+    font-weight: normal;
+}
+}
+	
+/* */
+
+@media only screen and (min-width: 768px) {
+    .column.medium-centered,
+    .columns.medium-centered {
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important
+    }
+    .column.medium-uncentered,
+    .columns.medium-uncentered {
+        margin-left: 0;
+        margin-right: 0;
+        float: left
+    }
+    .column.medium-uncentered.opposite,
+    .columns.medium-uncentered.opposite {
+        float: right
+    }
+}
+    
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.squads_main .bdr_left {
+    border-left: 1px solid #e1e1e1;
+    margin-left: -1px;
+    border-right: 0px
+	}
+	
+	.grounds_main .bdr_left {
+    border-left: 1px solid #e1e1e1;
+    margin-left: -1px;
+    padding-right: 4px;
+    border-right: 0px
+	}
+		
+}	
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.squads_main .bdr_left {
+        border: none
+    }
+}
+    
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.home.main-container .squads-section .title-header {
+    padding-top: 13px;
+    padding-bottom: 43px
+}
+.home.main-container .squads-section .title-header span {
+    line-height: 31px;
+    height: 20px
+}
+.home.main-container .squads-section .large-block-grid-2,
+.home.main-container .squads-section .medium-block-grid-2 {
+    margin: 30px 20px 30px 30px
+}
+.home.main-container .squads-section .large-block-grid-2 li,
+.home.main-container .squads-section .medium-block-grid-2 li {
+    padding-bottom: 0
+}
+.home.main-container .squads-section .large-block-grid-2 li a,
+.home.main-container .squads-section .medium-block-grid-2 li a {
+    color: #272a2f;
+    font-size: 12px;
+    font-family: bentonsansmedium;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 5px 0;
+    margin-right: 10px
+}
+.home.main-container .squads-section .small-block-grid-2 li {
+    padding-bottom: 0
+}
+.home.main-container .squads-section .small-block-grid-2 li a {
+    color: #272a2f;
+    font-size: 12px;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 5px 0
+}
+
+.home.main-container .squads-section .medium-block-grid-2 {
+        margin: 10px 20px
+    }
+}
+</style>
+
+<div role="main" class="large-14 medium-20 columns home squads_main main-container">
+	
+		<h3>Australia Test Squad / Players</h3>
+		<div class="large-20 medium-20 small-20 columns">
+			<ul class="large-block-grid-2 medium-block-grid-2 small-block-grid-1 ">
+
+				<li style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/267192.html"><img src="/inline/content/image/1030001.html?alt=icon" alt="Steven Smith" title="Steven Smith" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/267192.html">
+						Steven Smith
+						</a>
+						 
+							<span>captain</span>
+						
+						</h3>
+						
+						<span><b>Age:</b> 27 years 227 days</span>
+						
+						<span><b>Playing role:</b> Allrounder</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Legbreak googly</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/219889.html"><img src="/inline/content/image/817179.html?alt=icon" alt="David Warner" title="David Warner" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/219889.html">
+						David Warner
+						</a>
+						 
+							<span>vice-captain</span>
+						
+						</h3>
+						
+						<span><b>Age:</b> 30 years 80 days</span>
+						
+						<span><b>Playing role:</b> Opening batsman</span>
+						
+						<span><b>Batting:</b> Left-hand bat</span>
+						
+						<span><b>Bowling:</b> Legbreak</span>
+						
+					</div>
+				</li> 
+
+				<li style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/505120.html"><img src="/inline/content/image/817271.html?alt=icon" alt="Ashton Agar" title="Ashton Agar" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/505120.html">
+						Ashton Agar
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 23 years 93 days</span>
+						
+						<span><b>Playing role:</b> Bowler</span>
+						
+						<span><b>Batting:</b> Left-hand bat</span>
+						
+						<span><b>Bowling:</b> Slow left-arm orthodox</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/215152.html"><img src="/inline/content/image/632230.html?alt=icon" alt="Jackson Bird" title="Jackson Bird" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/215152.html">
+						Jackson Bird
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 30 years 35 days</span>
+						
+						<span><b>Playing role:</b> Bowler</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm fast-medium</span>
+						
+					</div>
+				</li> 
+
+				<li style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/489889.html"><img src="/inline/content/image/817269.html?alt=icon" alt="Pat Cummins" title="Pat Cummins" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/489889.html">
+						Pat Cummins
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 23 years 252 days</span>
+						
+						<span><b>Playing role:</b> Bowler</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm fast</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/334337.html"><img src="/inline/content/image/767345.html?alt=icon" alt="Peter Handscomb" title="Peter Handscomb" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/334337.html">
+						Peter Handscomb
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 25 years 264 days</span>
+						
+						<span><b>Playing role:</b> Top-order batsman</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+					</div>
+				</li> 
+
+				<li style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/288284.html"><img src="/inline/content/image/817243.html?alt=icon" alt="Josh Hazlewood" title="Josh Hazlewood" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/288284.html">
+						Josh Hazlewood
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 26 years 7 days</span>
+						
+						<span><b>Playing role:</b> Bowler</span>
+						
+						<span><b>Batting:</b> Left-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm fast-medium</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/215155.html"><img src="/inline/content/image/817171.html?alt=icon" alt="Usman Khawaja" title="Usman Khawaja" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/215155.html">
+						Usman Khawaja
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 30 years 28 days</span>
+						
+						<span><b>Playing role:</b> Top-order batsman</span>
+						
+						<span><b>Batting:</b> Left-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm medium</span>
+						
+					</div>
+				</li> 
+
+				<li style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/272279.html"><img src="/inline/content/image/817229.html?alt=icon" alt="Nathan Lyon" title="Nathan Lyon" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/272279.html">
+						Nathan Lyon
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 29 years 56 days</span>
+						
+						<span><b>Playing role:</b> Bowler</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm offbreak</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/6683.html"><img src="/inline/content/image/817149.html?alt=icon" alt="Shaun Marsh" title="Shaun Marsh" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/6683.html">
+						Shaun Marsh
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 33 years 190 days</span>
+						
+						<span><b>Playing role:</b> Top-order batsman</span>
+						
+						<span><b>Batting:</b> Left-hand bat</span>
+						
+						<span><b>Bowling:</b> Slow left-arm orthodox</span>
+						
+					</div>
+				</li> 
+
+				<li style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/325026.html"><img src="/inline/content/image/817259.html?alt=icon" alt="Glenn Maxwell" title="Glenn Maxwell" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/325026.html">
+						Glenn Maxwell
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 28 years 93 days</span>
+						
+						<span><b>Playing role:</b> Batting allrounder</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm offbreak</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/7069.html"><img src="/inline/content/image/531349.html?alt=icon" alt="Steve O'Keefe" title="Steve O'Keefe" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/7069.html">
+						Steve O'Keefe
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 32 years 37 days</span>
+						
+						<span><b>Playing role:</b> Allrounder</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Slow left-arm orthodox</span>
+						
+					</div>
+				</li> 
+
+				<li style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/722303.html"><img src="/inline/content/image/908985.html?alt=icon" alt="Matt Renshaw" title="Matt Renshaw" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/722303.html">
+						Matt Renshaw
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 20 years 293 days</span>
+						
+						<span><b>Batting:</b> Left-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm offbreak</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/325012.html"><img src="/inline/content/image/378142.html?alt=icon" alt="Marcus Stoinis" title="Marcus Stoinis" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/325012.html">
+						Marcus Stoinis
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 27 years 152 days</span>
+						
+						<span><b>Playing role:</b> Middle-order batsman</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm medium</span>
+						
+					</div>
+				</li> 
+
+				<li style="height: 194px;">
+
+					<div class="large-13 medium-13 small-20 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/590326.html">
+						Mitchell Swepson
+						</a>
+						
+						</h3>
+						
+						<span><b>Age:</b> 23 years 103 days</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Legbreak</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/230193.html"><img src="/inline/content/image/817183.html?alt=icon" alt="Matthew Wade" title="Matthew Wade" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/230193.html">
+						Matthew Wade
+						</a>
+						 
+							<span>wicketkeeper</span>
+						
+						</h3>
+						
+						<span><b>Age:</b> 29 years 20 days</span>
+						
+						<span><b>Playing role:</b> Wicketkeeper batsman</span>
+						
+						<span><b>Batting:</b> Left-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm medium</span>
+						
+					</div>
+				</li> 
+
+				<li style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/272450.html"><img src="/inline/content/image/1030003.html?alt=icon" alt="Mitchell Marsh" title="Mitchell Marsh" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/272450.html">
+						Mitchell Marsh
+						</a>
+						 
+							<span>withdrawn player</span>
+						
+						</h3>
+						
+						<span><b>Age:</b> 25 years 87 days</span>
+						
+						<span><b>Playing role:</b> Top-order batsman</span>
+						
+						<span><b>Batting:</b> Right-hand bat</span>
+						
+						<span><b>Bowling:</b> Right-arm medium</span>
+						
+					</div>
+				</li> 
+
+				<li class="bdr_left" style="height: 194px;">
+
+					<div class="large-7 medium-7 small-7 columns">
+						<a href="/india-v-australia-2016-17/content/player/311592.html"><img src="/inline/content/image/817253.html?alt=icon" alt="Mitchell Starc" title="Mitchell Starc" border="0"></a>
+					</div>
+
+					<div class="large-13 medium-13 small-13 columns">
+						<h3>
+						<a href="/india-v-australia-2016-17/content/player/311592.html">
+						Mitchell Starc
+						</a>
+						 
+							<span>withdrawn player</span>
+						
+						</h3>
+						
+						<span><b>Age:</b> 26 years 351 days</span>
+						
+						<span><b>Playing role:</b> Bowler</span>
+						
+						<span><b>Batting:</b> Left-hand bat</span>
+						
+						<span><b>Bowling:</b> Left-arm fast</span>
+						
+					</div>
+				</li> 
+
+			</ul>
+		</div>
+		
+
+	
+
+	</div>

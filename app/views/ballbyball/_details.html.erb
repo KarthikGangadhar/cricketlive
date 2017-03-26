@@ -1,4 +1,4 @@
-<section id="news">
+<section id="ballbyball_details">
 	<div class="container">
 		<!-- <% if data.matchScore.present? && data.matchScore['team-1'].present? && data.matchScore['team-1'].present? %>	 -->
 		<!-- <div class="row text-center col-sm-10 col-sm-offset-1 green">
@@ -6,8 +6,13 @@
 		</div> -->
 		<!-- <% end %> -->
 		<div class="row col-sm-10 col-sm-offset-1 ">
+			<div id="squard_details">
+				<%= render partial: 'squard_details' ,  locals: { data: data, balls: data.ball } %>
+			</div>
 			<!-- details section-->	
+			<div id="match_details">
 				<%= render partial: 'summary' ,  locals: { data: data, balls: data.ball } %>
+			</div>
 			<!-- details section-->
 		</div>
 	</div>

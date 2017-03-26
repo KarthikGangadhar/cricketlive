@@ -13,9 +13,12 @@
 		<div class="row col-sm-10 col-sm-offset-1 bg-light-gray">			
 			<% @cricket['data']['data'].each do |match|  %>
 					<div class="scorecard">
-						<div class="row">
+						<!-- <div class="row">
 					<b><%= "#{ @liveUpdate[match['unique_id']]['data']['team-1'] } VS #{ @liveUpdate[match['unique_id']]['data']['team-2']}" %> </b>
-					</div>
+					</div> -->
+					<!-- -->
+					<%= render partial: 'team_name', locals: { match: match, liveupdate: @liveUpdate} %>
+					<!-- -->	
 					<div class="row">
 					<%= @liveUpdate[match['unique_id']]['data']['type'] %>
 					</div>
@@ -25,9 +28,7 @@
 					<div class="row">
 					<%= @liveUpdate[match['unique_id']]['data']['score'] %>
 					</div>
-					<!-- -->
-					<%= render partial: 'team_name', locals: { match: match, liveupdate: @liveUpdate} %>
-					<!-- -->
+					
 					<div align="center">
 						<button class="btn btn-info">
 					<%= link_to "More" , {:controller => "ballbyball", :action => "show", :unique_id => match['unique_id'].to_s }  %>
