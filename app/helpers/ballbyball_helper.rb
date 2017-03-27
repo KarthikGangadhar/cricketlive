@@ -1,3 +1,5 @@
+require 'net/http'
+
 module BallbyballHelper
   
   def getPlayerName(teams, pid)
@@ -39,7 +41,17 @@ module BallbyballHelper
   end
   
   def getPlayerUrl(pid) 
-    url = PLAYER_URL + pid.to_s + ".jpg"
-    return url
+    image_url = PLAYER_URL + pid.to_s + ".jpg"
+    url = URI.parse(image_url)
+    req = Net::HTTP::Get.new(url.to_s)
+    res = Net::HTTP.start(url.host, url.port) {|http|
+    http.request(req)
+    }
+    
+    if res.code  != "200"
+      image_url = NO_PLAYER_URL
+    end
+    
+    return image_url
   end
 end
