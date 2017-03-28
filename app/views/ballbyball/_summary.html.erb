@@ -42,15 +42,15 @@
 			
 			<div class="cl-bold-8">
 				<div title="Jan 22, 2017 1:34:43 PM" class="cl-mat-mnu-wrp">
-					<%= delivery['overs_actual'] %>
+					<%= delivery['overs_actual'] if delivery['overs_actual'].present? %>
 				</div>
 			</div>
 			
 			<p class="cl-com-ln">
 				<!-- <%= "#{delivery['players']}, #{delivery['event'].html_safe} " %>  -->
 				<%= "#{delivery['players']}, #{delivery['event'].html_safe}. #{delivery['text'].html_safe} " %>
-				<% if delivery['event'] == "OUT"%>
-				<b><%= delivery['dismissal'].html_safe%> </b>
+				<% if delivery['event'].present? && delivery['event'] == "OUT"%>
+				<b><%= delivery['dismissal'].html_safe if delivery['dismissal'].present? %> </b>
 				<% end %>
 			</p>
 		</div>
