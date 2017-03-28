@@ -43,15 +43,20 @@ module BallbyballHelper
   def getPlayerUrl(pid) 
     image_url = PLAYER_URL + pid.to_s + ".jpg"
     url = URI.parse(image_url)
-    req = Net::HTTP::Get.new(url.to_s)
-    res = Net::HTTP.start(url.host, url.port) {|http|
-    http.request(req)
-    }
-    
+    req = Net::HTTP::Get.new(url.request_uri)
+    res = Net::HTTP.start(url.host, url.port, 
+        :use_ssl => url.scheme == 'https') {|http| 
+          http.request req
+        }
+        
     if res.code  != "200"
       image_url = NO_PLAYER_URL
     end
     
     return image_url
+  end
+  
+  def getPlayerStatUrl(pid) 
+    player_stat_url = PLAYER_STAT_URL + pid
   end
 end

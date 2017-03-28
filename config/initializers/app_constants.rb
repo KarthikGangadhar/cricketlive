@@ -14,3 +14,4 @@ CRYPT     = ActiveSupport::MessageEncryptor.new(Rails.application.secrets.secret
   DEFAULT_TEAM_FLAGS_PATH        = '/assets/team_flags/Wicket.png'
   PLAYER_URL                     = 'http://cdn.cricapi.com/players/'
   NO_PLAYER_URL                  = '/assets/no_player.png'
+  PLAYER_STAT_URL                = '/playerstat/show?pid='

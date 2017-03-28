@@ -242,13 +242,13 @@
     }
 }
 </style>
+<% data.teams.each do |team| %>
 
 <div role="main" class="large-14 medium-20 columns home squads_main main-container">
-	
-		<h3><%= data.teams[0].team_name %> Test Squad / Players</h3>
+		<h3><%= team.team_name %> <%= data.matchScore.type if data.matchScore.present? && data.matchScore.type.present? %> Squad / Players</h3>
 		<div class="large-20 medium-20 small-20 columns">
 			<ul class="large-block-grid-2 medium-block-grid-2 small-block-grid-1 ">
-				<% players = data.teams[0].player %>
+				<% players = team.player %>
 				<% players.each do |player|%>
 			<div id="player_item" class="col-sm-6">
 				<li style="height: 194px;">
@@ -261,7 +261,7 @@
 					
 					<div class="large-13 medium-13 small-13 columns">
 						<h3>
-						<a href="/india-v-australia-2016-17/content/player/267192.html">
+						<a href="<%= getPlayerStatUrl(player['object_id']) %>">
 						<%= player.known_as %>
 						</a>
 						
@@ -273,7 +273,7 @@
 						
 						<span><b>Batting:</b> <%= player.batting_style_long %></span>
 						
-						<span><b>Bowling:</b> <%= player.bowling_style %></span>
+						<span><b>Bowling:</b> <%= player.bowling_style_long %></span>
 							
 					</div>
 				</li> 
@@ -284,7 +284,7 @@
 		</div>		
 	</div>
 	
-
+<% end %>
 <style>
 	
 	/*.columns {
