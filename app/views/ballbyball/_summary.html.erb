@@ -37,11 +37,15 @@
 			<%= render 'live_score' ,  @cricketScore %>
 		<% else %>
 		<div id="comm_1485072283484" class="cl-col-100" >
+						
+				<%= delivery['post_text'].html_safe if delivery['post_text'].present? %> 					
+			
 			<div class="cl-bold-8">
 				<div title="Jan 22, 2017 1:34:43 PM" class="cl-mat-mnu-wrp">
 					<%= delivery['overs_actual'] %>
 				</div>
 			</div>
+			
 			<p class="cl-com-ln">
 				<!-- <%= "#{delivery['players']}, #{delivery['event'].html_safe} " %>  -->
 				<%= "#{delivery['players']}, #{delivery['event'].html_safe}. #{delivery['text'].html_safe} " %>
