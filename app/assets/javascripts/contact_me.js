@@ -149,4 +149,18 @@ $('#team_detail_nav').on('click',function(){
 	}
 });
 
+setInterval(refreshPartial, 30000);
+
+function refreshPartial() {
+	var _context =  jQuery('#match_update_container'),
+          _match_id = _context.data('matchId'),
+          _params = { match_id: _match_id };
+  
+ jQuery.getJSON('/update_page', _params)
+ 	.done(function(response) {
+          if (response && response.details) {
+            var data = response.details;
+           }
+        });
+}
 

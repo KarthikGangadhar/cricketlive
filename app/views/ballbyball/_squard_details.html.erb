@@ -242,10 +242,10 @@
     }
 }
 </style>
-<% data.teams.each do |team| %>
+<% match_data.teams.each do |team| %>
 
 <div role="main" class="large-14 medium-20 columns home squads_main main-container">
-		<h3><%= team.team_name %> <%= data.matchScore.type if data.matchScore.present? && data.matchScore.type.present? %> Squad / Players</h3>
+		<h3><%= team.team_name %> <%= match_data.matchScore.type if match_data.matchScore.present? && match_data.matchScore.type.present? %> Squad / Players</h3>
 		<div class="large-20 medium-20 small-20 columns">
 			<ul class="large-block-grid-2 medium-block-grid-2 small-block-grid-1 ">
 				<% players = team.player %>

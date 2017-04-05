@@ -1,17 +1,17 @@
 <section id="ballbyball_details">
 	<div class="container">
-		<!-- <% if data.matchScore.present? && data.matchScore['team-1'].present? && data.matchScore['team-1'].present? %>	 -->
+		<!-- <% if match_data.matchScore.present? && match_data.matchScore['team-1'].present? && match_data.matchScore['team-1'].present? %>	 -->
 		<!-- <div class="row text-center col-sm-10 col-sm-offset-1 green">
-			<h4><%= data.matchScore['team-1'] + " VS "+ data.matchScore['team-2'] %></h4>
+			<h4><%= match_data.matchScore['team-1'] + " VS "+ match_data.matchScore['team-2'] %></h4>
 		</div> -->
 		<!-- <% end %> -->
 		<div class="row col-sm-10 col-sm-offset-1 ">
 			<div id="squard_details">
-				<%= render partial: 'squard_details' ,  locals: { data: data, balls: data.ball } %>
+				<%= render partial: 'squard_details' ,  locals: { match_data: match_data, balls: match_data.ball } %>
 			</div>
 			<!-- details section-->	
 			<div id="match_details">
-				<%= render partial: 'summary' ,  locals: { data: data, balls: data.ball } %>
+				<%= render partial: 'summary' ,  locals: { match_data: match_data, balls: match_data.ball } %>
 			</div>
 			<!-- details section-->
 		</div>

@@ -3,16 +3,21 @@ require 'cricapi_response.rb'
 
 class Ballbyball
 
-  attr_accessor :teams, :team1, :team2, :ball, :bowler, :batsman, :matchScore
+  attr_accessor :teams, :team1, :team2, :ball, :bowler, :batsman, :matchScore, :matchId
 
 
-  def initialize hash
-    @details = Hashie::Mash.new(hash)
+  def initialize(hash_data, match_id)
+    @matchId = match_id
+    @details = get_details(hash_data)
     if @details.present?
       @ballbyball = @details.ballbyball.data if @details.ballbyball.present? && @details.ballbyball.data.present?
       @cricketScore = @details.cricketScore.data if @details.cricketScore.present? && @details.cricketScore.data.present?
     end
     build_ballbyball_summary if @details.present?
+  end
+  
+  def get_details(content)
+    Hashie::Mash.new(content)
   end
 
   private

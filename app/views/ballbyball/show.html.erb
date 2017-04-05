@@ -38,11 +38,10 @@
 	</head>
 
 	<body id="page-top" class="index">
-
 		<%= render 'navigation' %>
 		
-		<% if @data.present? %>	
-		<%= render partial: 'details' , locals: {data: @data }  %>
+		<% if @match_data.present? %>	
+		<%= render partial: 'details' , locals: {match_data: @match_data }  %>
 		<% end %>
 		
 		<%= render 'home/footer' %>

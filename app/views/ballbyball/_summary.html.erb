@@ -13,23 +13,23 @@
 </style>
 <div class="cl-col-100">
 	<div id="live_updates">
-	<% if data.present? &&  data.matchScore['team-1'].present? && data.matchScore['team-2'].present? %>
+	<% if match_data.present? &&  match_data.matchScore['team-1'].present? && match_data.matchScore['team-2'].present? %>
 	<div class="col-sm-12 green title" align="center" >
-		<h4><%= data.matchScore['team-1'] + " VS "+ data.matchScore['team-2'] %></h4>	
+		<h4><%= match_data.matchScore['team-1'] + " VS "+ match_data.matchScore['team-2'] %></h4>	
 	</div>
 	<% end %>
 	
-	<% if data.matchScore.present? %>
-	<%= render partial: 'live_score' ,  locals: { liveScore: data.matchScore } %>
+	<% if match_data.matchScore.present? %>
+	<%= render partial: 'live_score' ,  locals: { liveScore: match_data.matchScore } %>
 	<% end %>
 	
-	<%= render partial: 'player_update' ,  locals: {batsmen: data.batsman , bowlers: data.bowler, team: data.teams } %>
+	<%= render partial: 'player_update' ,  locals: {batsmen: match_data.batsman , bowlers: match_data.bowler, team: match_data.teams } %>
 	
 	<% if balls.present? %>
 	<%  balls.each do |ball| %>
 	<% if !ball['ball'].first['pre_text'].present? || strip_tags(ball['ball'].first['pre_text']).upcase != "\nUPDATES ONLY\n" %>
 	
-	<%= render partial: 'over_details',  locals: { ball: ball , team: data.teams} %>	
+	<%= render partial: 'over_details',  locals: { ball: ball , team: match_data.teams} %>	
 	<% end %>
 	<div class="cl-min-inf" >
 		<% ball['ball'].each do |delivery| %>
@@ -64,10 +64,10 @@
 	</div>
 	
 	<div>
-		<% if data.present? && data.teams.present?%>
+		<% if match_data.present? && match_data.teams.present?%>
 		<!-- loop through team-->
 		<div id="team_details">
-		<%  data.teams.each do |team| %>
+		<%  match_data.teams.each do |team| %>
 		<!-- redundant required-->
 		<div class="cl-ltst-wgt-hdr">
 			<div class="cl-scrd-hdr-rw">
@@ -113,3 +113,6 @@
 		<% end %>
 		</div>
 		<!-- end of team loop -->
+<div id="match_update_container" 
+data-match-id='<%= match_data.matchId if match_data.matchId.present? %>'>
+</div>
