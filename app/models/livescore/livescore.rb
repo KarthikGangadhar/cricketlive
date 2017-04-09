@@ -3,27 +3,39 @@ require 'cricapi_response.rb'
 
 class LiveScore
 
-  attr_accessor :news, :news_count
+  attr_accessor :livescores, :livescore_by_type
 
 
   def initialize hash
     @details = Hashie::Mash.new(hash)
-    build_news_summary if @details.present?
+    build_detail_summary if @details.present?
   end
 
   private
 
-  def build_news_summary
-    @news                 = get_news
-    @news_count           = get_news_count
+  def build_detail_summary
+    @livescores           = get_live_score
+    @livescore_by_type    = get_score_by_type
   end
 
-  def get_news
-    @details.data.data if @details.data.present? && @details.data.data.present? 
+  def get_live_score
+    @details 
   end
   
-  def get_news_count
-    @details.data.data.count if @details.data.present? && @details.data.data.present? 
+  def get_score_by_type    
+    match_scores = @details
+    match_ids = match_scores[:match_id]
+    match_score_by_type = {}
+    
+    if match_scores.present? && match_ids.present?
+      match_ids.each do |id|
+       type = match_scores[id].data.type if match_scores[id].present? && match_scores[id].data.present? && match_scores[id].data.type.present?
+       if type.present?
+         match_score_by_type[type] = {} if !match_score_by_type[type].present? 
+         match_score_by_type[type][id] = match_scores[id].data
+       end  
+      end
+    end     
   end
 
 end

@@ -41,7 +41,7 @@
 		
 		<%= render 'score_section' ,  @cricket %>
 		
-		<%= render 'news_section' ,  @news %>
+		<%= render partial: 'news_section', locals: { news: @news.news , news_count: @news.news_count } %>
 		
 		<%= render 'schedules_section' ,  @matchCalendar %>
 	

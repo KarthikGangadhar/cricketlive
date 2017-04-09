@@ -1,17 +1,21 @@
 require './lib/cricket_api/request.rb'
+require 'news/news.rb'
+require 'livescore/livescore.rb'
 require 'cricapi_response.rb'
 
 class CricketController < ApplicationController
   def show      
       request = CricApi::ProfessionalProfile.new().getResponseforHome
-      @news = {
-        :news => request[:news],
-        :count => request[:news]['data']['data'].count
-      }
+      @news = News.new(request[:news])
       @matchCalendar = request[:matchcalendar]
-      @cricket = request[:cricket]
       @matches = request[:matches]
-      # @liveUpdate = CricApi::ProfessionalProfile.new().getLiveUpdates(@cricket , @matches)
-      @liveUpdate = CricApi::ProfessionalProfile.new().getAllScore(@cricket)
+      @cricket = Hashie::Mash.new(request[:cricket]) if request[:cricket].present? 
+      if @cricket.present?
+        match_ids = @cricket.data.data.map(&:unique_id) if @cricket.data.present? && @cricket.data.data.present? 
+        livescores = CricApi::ProfessionalProfile.new().getAllScore(@cricket) 
+        livescores[:match_id] = match_ids 
+        match_update = LiveScore.new(livescores)  
+        @liveUpdate = match_update.livescores
+      end
   end
 end
