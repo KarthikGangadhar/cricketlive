@@ -1,50 +1,59 @@
-<script>
-$(document).ready(function(){
-   $(".news_button").on("click", function(){	
-		go_to_url = "/news/show"
-		window.open(go_to_url, '_blank');
-	})
-});
-	
-</script>
+<style>
 
+.load-more-button{
+    padding: 8px 20px;
+    background: #fbfbfb;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 37px;
+    min-width: 130px;
+    margin-bottom: 5%;
+}
+
+#news_id {
+	/*height:100px !important;*/
+}
+
+</style>
+<!-- <script>
+	$('#prop_load_more').on('click', function(){
+	alert("loading...");
+});
+</script> -->
 <section id="news">
 	<div class="container">
 		<div class="row text-center col-sm-10 col-sm-offset-1 green">
 			<h3>Cricket News</h3>
 		</div>
-		<div class="row col-sm-10 col-sm-offset-1 bg-light-gray">
-			<% news = @news[:news]['data']%>
-			<% ncount = 0 %>
-			<% for type in news['data'] %>
-
+		<div class="row col-sm-10 col-sm-offset-1 bg-light-gray" id="news_id">
+			<% if news.present? && news_count.present? %>
+			<% news.each do |type| %>
+			<% if type.present? && type.title.present? && type.description.present?  %>
 			<div class="cl-news-box bg-light-gray">
 				<div class="cl-nws-lst">
 					<b class="cl-nws-ttl"><b class="cl-nws-hdln-ancr"
-					title="<%= type['title'].html_safe %>"><%= type['title'].html_safe %></b></b>
+					title="<%= type.title.html_safe %>"><%= type.title.html_safe %></b></b>
 					<div class="cl-nws-intr">
-						<%= type['description'].html_safe %>
+						<%= type.description.html_safe %>
 					</div>
 				</div>
 
 			</div>
-			<% ncount += 1 %>
-			<% if ncount == 5 %>
-				<% break %>
+			<% end %>	
 			<% end %>
-			<% end %>
+			<div align="center" >
+			<button type="button" id="prop_load_more" class="load-more-button">Load More News</button>
 			</div>
-			<!-- button -->
+			<% else %>
+			<div class="cl-news-box bg-light-gray" align="center">
+				<div class="cl-nws-lst" align="center">
+					<b class="cl-nws-ttl"><b class="cl-nws-hdln-ancr"
+					title="newsnot found" >News not present. please visit later</b></b>
+				</div>
 
-			<div align="center" class="row col-sm-10 col-sm-offset-1">
-				
-			<button type="button" href="/news/show" id="" class="btn btn-primary news_button" data-dismiss="modal">
-			 More <i class="fa fa-times"></i>	
-			</button>
-		
-		<!-- button end-->
-	</div>
-
+			</div>
+			<% end %>	
+		</div>
 	</div>
 </section>
 
