@@ -35,7 +35,8 @@ class LiveScore
          match_score_by_type[type][id] = match_scores[id].data
        end  
       end
-    end     
+    end 
+    match_score_by_type    
   end
 
 end
